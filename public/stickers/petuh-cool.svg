@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-opacity="0.25" />
+    </filter>
+  </defs>
+  <!-- Rooster Comb -->
+  <path d="M52 46 C45 28 62 20 68 34 C74 18 90 22 92 36 C98 25 110 32 104 48 Z" fill="#ef4444" stroke="#b91c1c" stroke-width="2.5" />
+  <!-- Rooster Head & Body -->
+  <ellipse cx="80" cy="82" rx="42" ry="40" fill="#f97316" />
+  <!-- Sunglasses -->
+  <polygon points="45,66 73,66 70,82 48,82" fill="#18181b" stroke="#000" stroke-width="2" rx="3" />
+  <polygon points="87,66 115,66 112,82 90,82" fill="#18181b" stroke="#000" stroke-width="2" rx="3" />
+  <line x1="73" y1="72" x2="87" y2="72" stroke="#18181b" stroke-width="3" />
+  <line x1="49" y1="69" x2="60" y2="78" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" />
+  <line x1="91" y1="69" x2="102" y2="78" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" />
+  <!-- Beak -->
+  <polygon points="73,84 87,84 80,98" fill="#eab308" stroke="#ca8a04" stroke-width="2" />
+  <!-- Wattle -->
+  <ellipse cx="80" cy="103" rx="7" ry="9" fill="#ef4444" />
+  <!-- Badge -->
+  <rect x="28" y="120" width="104" height="24" rx="12" fill="#dc2626" stroke="#fff" stroke-width="2" filter="url(#shadow)" />
+  <text x="80" y="136" fill="#fff" font-size="11" font-weight="900" font-family="sans-serif" text-anchor="middle" letter-spacing="1">PETUH BOSS</text>
+</svg>

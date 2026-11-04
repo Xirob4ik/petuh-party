@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <!-- Comb -->
+  <path d="M58 36 C52 20 66 16 72 28 C78 14 92 18 94 30 C100 20 108 26 104 38 Z" fill="#dc2626" />
+  <!-- Gigachad sharp jaw outline -->
+  <polygon points="56,60 104,60 100,94 80,118 60,94" fill="#ea580c" stroke="#9a3412" stroke-width="2.5" />
+  <!-- Chiseled Cheekbones -->
+  <line x1="64" y1="74" x2="72" y2="88" stroke="#7c2d12" stroke-width="2.5" />
+  <line x1="96" y1="74" x2="88" y2="88" stroke="#7c2d12" stroke-width="2.5" />
+  <!-- Stern Eyes -->
+  <line x1="62" y1="68" x2="74" y2="70" stroke="#000" stroke-width="3" stroke-linecap="round" />
+  <line x1="86" y1="70" x2="98" y2="68" stroke="#000" stroke-width="3" stroke-linecap="round" />
+  <polygon points="75,76 85,76 80,86" fill="#eab308" />
+  <!-- Chin cleft -->
+  <line x1="80" y1="110" x2="80" y2="116" stroke="#7c2d12" stroke-width="3" stroke-linecap="round" />
+  <!-- Badge -->
+  <rect x="36" y="124" width="88" height="22" rx="11" fill="#18181b" stroke="#facc15" stroke-width="2" />
+  <text x="80" y="139" fill="#facc15" font-size="11" font-weight="900" font-family="sans-serif" text-anchor="middle">БАЗА 🗿</text>
+</svg>

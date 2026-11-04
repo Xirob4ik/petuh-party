@@ -1,0 +1,13 @@
+# Настройки для Render (render.com). Можно не трогать.
+services:
+  - type: web
+    name: petuh-party
+    runtime: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: NODE_VERSION
+        value: "22"

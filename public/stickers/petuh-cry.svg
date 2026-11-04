@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <path d="M58 46 C52 32 66 26 70 38 C76 24 90 28 92 40 C98 30 106 36 102 48 Z" fill="#ef4444" />
+  <circle cx="80" cy="80" r="38" fill="#f97316" />
+  <!-- Sad Eyes -->
+  <path d="M58 70 Q66 62 74 70" stroke="#000" stroke-width="3.5" stroke-linecap="round" fill="none" />
+  <path d="M86 70 Q94 62 102 70" stroke="#000" stroke-width="3.5" stroke-linecap="round" fill="none" />
+  <!-- Tear streams -->
+  <path d="M64 74 Q60 92 56 118" stroke="#38bdf8" stroke-width="7" stroke-linecap="round" fill="none" />
+  <path d="M96 74 Q100 92 104 118" stroke="#38bdf8" stroke-width="7" stroke-linecap="round" fill="none" />
+  <!-- Trembling Beak -->
+  <polygon points="74,84 86,84 80,94" fill="#eab308" stroke="#ca8a04" stroke-width="2" />
+  <!-- Badge -->
+  <rect x="32" y="124" width="96" height="22" rx="11" fill="#4338ca" stroke="#fff" stroke-width="2" />
+  <text x="80" y="139" fill="#fff" font-size="11" font-weight="900" font-family="sans-serif" text-anchor="middle">ШЕДЕВР... 😭</text>
+</svg>

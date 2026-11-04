@@ -1,0 +1,21 @@
+{
+  "name": "petuh-party",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Совместный просмотр VK Видео, YouTube, Rutube и файлов с синхронной паузой, перемоткой и чатом",
+  "license": "MIT",
+  "scripts": {
+    "build": "node build.mjs",
+    "start": "node dist/server.js",
+    "dev": "node build.mjs --dev"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "esbuild": "^0.28.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "ws": "^8.21.0"
+  }
+}

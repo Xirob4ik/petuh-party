@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <!-- Comb -->
+  <path d="M56 42 C50 26 65 20 70 32 C76 18 90 22 92 34 C98 24 108 30 102 44 Z" fill="#ef4444" />
+  <!-- Head -->
+  <circle cx="80" cy="68" r="32" fill="#fb923c" />
+  <!-- Eyes -->
+  <circle cx="70" cy="62" r="7" fill="#fff" /><circle cx="71" cy="62" r="3.5" fill="#000" />
+  <circle cx="90" cy="62" r="7" fill="#fff" /><circle cx="89" cy="62" r="3.5" fill="#000" />
+  <!-- Beak -->
+  <polygon points="74,72 86,72 80,82" fill="#eab308" stroke="#ca8a04" stroke-width="1.5" />
+  <!-- Popcorn Bucket -->
+  <polygon points="56,86 104,86 98,136 62,136" fill="#ef4444" stroke="#b91c1c" stroke-width="2" />
+  <line x1="68" y1="86" x2="69" y2="136" stroke="#fff" stroke-width="4" />
+  <line x1="80" y1="86" x2="80" y2="136" stroke="#fff" stroke-width="4" />
+  <line x1="92" y1="86" x2="91" y2="136" stroke="#fff" stroke-width="4" />
+  <!-- Popcorn on top -->
+  <circle cx="65" cy="84" r="7" fill="#fef08a" stroke="#ca8a04" stroke-width="1" />
+  <circle cx="78" cy="80" r="8" fill="#fff" stroke="#ca8a04" stroke-width="1" />
+  <circle cx="92" cy="83" r="7" fill="#fef08a" stroke="#ca8a04" stroke-width="1" />
+  <circle cx="85" cy="76" r="6" fill="#fff" stroke="#ca8a04" stroke-width="1" />
+  <!-- Badge -->
+  <rect x="36" y="126" width="88" height="20" rx="10" fill="#18181b" stroke="#eab308" stroke-width="2" />
+  <text x="80" y="140" fill="#facc15" font-size="10" font-weight="900" font-family="sans-serif" text-anchor="middle">КИНОМАН 🍿</text>
+</svg>
