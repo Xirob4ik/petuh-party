@@ -49,6 +49,9 @@ export function Room({ roomId, nav, user, onUserChange, onHome, onOpenProfile }:
   const [keysOpen, setKeysOpen] = useState(false);
   const [fullscreen, setFullscreen] = useState(false);
   const screenRef = useRef<HTMLDivElement>(null);
+  const [composing, setComposing] = useState(false);
+  const isPhone = useMedia('(max-width: 899px)');
+  const isTouch = useMedia('(hover: none)');
   const engineRef = useRef<SyncEngine | null>(null);
   const tabRef = useRef(tab);
   tabRef.current = tab;
@@ -137,6 +140,43 @@ export function Room({ roomId, nav, user, onUserChange, onHome, onOpenProfile }:
   useEffect(() => {
     if (tab === 'chat') setUnread(0);
   }, [tab]);
+
+  // ── режим «пишу и смотрю»: включён, пока фокус в поле сообщения ──
+  useEffect(() => {
+    let t: number | undefined;
+    const check = () => {
+      clearTimeout(t);
+      // небольшая задержка: тап по «Отправить» не должен дёргать раскладку
+      t = window.setTimeout(() => setComposing(!!document.activeElement?.matches('.composer textarea')), 120);
+    };
+    document.addEventListener('focusin', check);
+    document.addEventListener('focusout', check);
+    return () => {
+      clearTimeout(t);
+      document.removeEventListener('focusin', check);
+      document.removeEventListener('focusout', check);
+    };
+  }, []);
+
+  // ── телефон: держим комнату ровно в видимой области, чтобы клавиатура не уводила видео вверх ──
+  useEffect(() => {
+    const vv = window.visualViewport;
+    if (!vv) return;
+    const root = document.documentElement;
+    const update = () => {
+      root.style.setProperty('--vvh', `${vv.height}px`);
+      root.style.setProperty('--vvtop', `${vv.offsetTop}px`);
+    };
+    update();
+    vv.addEventListener('resize', update);
+    vv.addEventListener('scroll', update);
+    return () => {
+      vv.removeEventListener('resize', update);
+      vv.removeEventListener('scroll', update);
+      root.style.removeProperty('--vvh');
+      root.style.removeProperty('--vvtop');
+    };
+  }, []);
 
   // ── полноэкранный режим сайта: в нём видны летающие реакции ──
   useEffect(() => {
@@ -239,9 +279,21 @@ export function Room({ roomId, nav, user, onUserChange, onHome, onOpenProfile }:
   }
 
   const source = video.source;
+  // на телефоне таймкоды стоят в одной строке со статусом — больше места под чат
+  const watchersEl =
+    client && isPhone ? (
+      <Watchers
+        people={online}
+        positions={positions}
+        video={video}
+        meId={user.id}
+        self={info ? { time: info.time, drift: info.drift, status: info.status } : null}
+        serverNow={() => client.serverNow()}
+      />
+    ) : null;
 
   return (
-    <div className="room">
+    <div className={`room${composing && isTouch && isPhone ? ' composing' : ''}`}>
       <header className="room-top">
         <Logo onClick={onHome} />
         <button className="room-code" onClick={invite} title="Скопировать ссылку-приглашение">
@@ -311,6 +363,7 @@ export function Room({ roomId, nav, user, onUserChange, onHome, onOpenProfile }:
             )}
           </div>
           <StatusBar
+            watchers={watchersEl}
             video={video}
             info={info}
             net={net}
@@ -321,7 +374,7 @@ export function Room({ roomId, nav, user, onUserChange, onHome, onOpenProfile }:
             onUnblock={() => engineRef.current?.unblock()}
             onFullscreen={toggleFullscreen}
           />
-          {client && (
+          {client && !isPhone && (
             <Watchers
               people={online}
               positions={positions}
@@ -347,7 +400,7 @@ export function Room({ roomId, nav, user, onUserChange, onHome, onOpenProfile }:
               Зрители <span className="count">{online.length}</span>
             </button>
           </div>
-          {tab === 'chat' ? (
+          {tab === 'chat' || isPhone ? (
             <Chat
               messages={messages}
               people={peopleMap}
@@ -395,7 +448,21 @@ const VERB: Record<string, string> = {
   source: 'включает видео',
 };
 
+function useMedia(query: string) {
+  const [match, setMatch] = useState(() => window.matchMedia?.(query).matches ?? false);
+  useEffect(() => {
+    const m = window.matchMedia?.(query);
+    if (!m) return;
+    const fn = () => setMatch(m.matches);
+    fn();
+    m.addEventListener('change', fn);
+    return () => m.removeEventListener('change', fn);
+  }, [query]);
+  return match;
+}
+
 function StatusBar({
+  watchers,
   video,
   info,
   net,
@@ -409,6 +476,7 @@ function StatusBar({
   onResync: () => void;
   onUnblock: () => void;
   onFullscreen: () => void;
+  watchers?: React.ReactNode;
 }) {
   const [, force] = useState(0);
   useEffect(() => {
@@ -459,8 +527,8 @@ function StatusBar({
       : null;
 
   return (
-    <div className="status">
-      <span className={`status-dot ${tone}`} aria-hidden="true" />
+    <div className={`status ${tone}`}>
+      <span className={`status-dot ${tone}`} aria-hidden="true" title={text} />
       <div className="status-main">
         <span className="status-text">{text}</span>
         {info?.status === 'blocked' && (
@@ -477,6 +545,7 @@ function StatusBar({
           <span className="status-kind">{SOURCE_LABEL[video.source.kind]}</span> {video.source.title}
         </span>
       </div>
+      {watchers && <div className="status-watchers">{watchers}</div>}
       {lastText && <span className="status-last">{lastText}</span>}
       {info && info.status !== 'unsynced' && info.status !== 'error' && (
         <span className="status-time">

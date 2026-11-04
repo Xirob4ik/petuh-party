@@ -70,6 +70,17 @@ export function Chat({
     if (el && stick.current) el.scrollTop = el.scrollHeight;
   }, [messages, typing.length]);
 
+  // список сжимается при открытой клавиатуре — держим последние сообщения на виду
+  useEffect(() => {
+    const el = listRef.current;
+    if (!el || typeof ResizeObserver === 'undefined') return;
+    const ro = new ResizeObserver(() => {
+      if (stick.current) el.scrollTop = el.scrollHeight;
+    });
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, []);
+
   useEffect(() => {
     const el = inputRef.current;
     if (!el) return;
@@ -141,7 +152,9 @@ export function Chat({
     }
   };
 
+  const sheetAt = useRef(0);
   const openMenu = (m: Message) => {
+    sheetAt.current = Date.now();
     if (isTouch()) setSheet(m);
     else setPicker(m.id);
     navigator.vibrate?.(12);
@@ -379,6 +392,14 @@ export function Chat({
             maxLength={LIMITS.text}
             placeholder="Сообщение"
             onChange={(e) => onChange(e.target.value)}
+            onFocus={() => {
+              stick.current = true;
+              setTimeout(() => {
+                const el = listRef.current;
+                if (el) el.scrollTop = el.scrollHeight;
+              }, 250);
+            }}
+
             onKeyDown={(e) => {
               if (e.key === 'Enter' && !e.shiftKey && !e.nativeEvent.isComposing) {
                 e.preventDefault();
@@ -402,7 +423,10 @@ export function Chat({
           >
             <Icon name="sticker" />
           </button>
-          <button className="send" onClick={send} disabled={!text.trim() && !image} aria-label="Отправить">
+          <button
+            className="send"
+            onPointerDown={(e) => e.preventDefault()}
+            onClick={send} disabled={!text.trim() && !image} aria-label="Отправить">
             <Icon name="send" />
           </button>
         </div>
@@ -410,7 +434,13 @@ export function Chat({
 
       {sheet && (
         <>
-          <div className="sheet-scrim show" onClick={() => setSheet(null)} />
+          <div
+            className="sheet-scrim show"
+            onClick={() => {
+              // отпускание пальца после удержания не должно сразу закрывать меню
+              if (Date.now() - sheetAt.current > 500) setSheet(null);
+            }}
+          />
           <div className="msg-sheet" role="dialog" aria-label="Действия с сообщением">
             <p className="msg-sheet-preview">
               <b>{sheet.name}</b> {sheet.text || (sheet.sticker ? 'Стикер' : sheet.image ? 'Фото' : '')}

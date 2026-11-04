@@ -1928,3 +1928,99 @@ kbd {
     font-size: 12.5px;
   }
 }
+
+/* ─── Телефон: больше места чату, режим «пишу и смотрю» ───────── */
+.status-watchers {
+  display: none;
+}
+@media (max-width: 899px) {
+  html,
+  body {
+    overscroll-behavior: none;
+  }
+  /* комната занимает ровно видимую часть экрана — при открытой клавиатуре тоже */
+  .room {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: var(--vvtop, 0px);
+    height: var(--vvh, 100dvh);
+  }
+  .tabs {
+    display: none;
+  }
+  .side {
+    border-top: 0;
+  }
+  /* статус и таймкоды — одной строкой */
+  .status {
+    min-height: 46px;
+    gap: 8px;
+    padding: 6px 6px 6px 12px;
+    border-bottom: 1px solid var(--line);
+  }
+  .status.ok .status-main {
+    display: none;
+  }
+  .status:not(.ok) .status-main {
+    flex: none;
+    max-width: 55%;
+  }
+  .status:not(.ok) .status-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .status-watchers {
+    display: block;
+    flex: 1;
+    min-width: 0;
+  }
+  .status-watchers .watchers {
+    padding: 0;
+  }
+  .status .icon-btn {
+    width: 34px;
+    height: 34px;
+  }
+  /* чат крупнее */
+  .chat-list {
+    padding: 10px 6px 4px;
+  }
+  .msg-text {
+    font-size: 16px;
+    line-height: 1.45;
+  }
+  .msg-name {
+    font-size: 15px;
+  }
+  .sys {
+    font-size: 13.5px;
+    margin: 6px 12px;
+  }
+  .reaction-bar {
+    margin-bottom: 2px;
+  }
+  .reaction-bar-list button {
+    width: 34px;
+    height: 34px;
+  }
+  .typing:empty {
+    height: 6px;
+  }
+
+  /* пишу и смотрю: остаются видео, сообщения и поле ввода */
+  .room.composing .room-top,
+  .room.composing .status,
+  .room.composing .reaction-bar,
+  .room.composing .tip {
+    display: none;
+  }
+  .room.composing .screen {
+    aspect-ratio: auto;
+    max-height: none;
+    height: min(56.25vw, calc(var(--vvh, 100dvh) * 0.45));
+  }
+  .room.composing .composer {
+    padding-bottom: 8px;
+  }
+}
