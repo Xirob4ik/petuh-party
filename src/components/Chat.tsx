@@ -425,7 +425,16 @@ export function Chat({
           </button>
           <button
             className="send"
-            onPointerDown={(e) => e.preventDefault()}
+            // компьютер: не уводим фокус из поля ввода
+            onMouseDown={(e) => e.preventDefault()}
+            // телефон: отправляем по отпусканию пальца на кнопке. Safari на iPhone не присылает «клик»,
+            // если отменить нажатие, а без отмены прячет клавиатуру — поэтому обрабатываем касание сами
+            onTouchEnd={(e) => {
+              e.preventDefault();
+              const t = e.changedTouches[0];
+              const el = t && document.elementFromPoint(t.clientX, t.clientY);
+              if (el && e.currentTarget.contains(el)) send();
+            }}
             onClick={send} disabled={!text.trim() && !image} aria-label="Отправить">
             <Icon name="send" />
           </button>
