@@ -279,7 +279,7 @@ export function Chat({
                     name={m.name}
                     avatar={person?.avatar ?? null}
                     color={person?.color ?? '#5a5363'}
-                    size={30}
+                    size={28}
                     dim={!person}
                   />
                 )}
@@ -345,8 +345,7 @@ export function Chat({
                             setSheet(m);
                           }}
                         >
-                          <Icon name="smile" size={16} />
-                          <span className="plus">+</span>
+                          <Icon name="smile" size={15} />
                         </button>
                         <button
                           className="msg-btn"
@@ -359,7 +358,6 @@ export function Chat({
                           }}
                         >
                           <Icon name="reply" size={15} />
-                          Ответить
                         </button>
                       </>
                     )}
