@@ -7,7 +7,8 @@
 Unbounded и переведены в кривые, поэтому выглядят одинаково на любом устройстве.
 
 Запуск (нужен Python 3 и fontTools):  python3 tools/stickers.py
-Результат: public/stickers/*.svg и shared/stickers.ts
+Результат: tools/sticker-svg/*.svg и shared/stickers.ts,
+затем  node tools/rasterize.mjs  делает из них public/stickers/*.webp
 """
 from __future__ import annotations
 
@@ -22,7 +23,8 @@ from fontTools.ttLib import TTFont
 from fontTools.varLib.instancer import instantiateVariableFont
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-OUT = os.path.join(ROOT, 'public', 'stickers')
+# исходники в SVG; картинки для сайта (WebP) делает tools/rasterize.mjs
+OUT = os.path.join(ROOT, 'tools', 'sticker-svg')
 
 # ── палитра ────────────────────────────────────────────────────
 YOLK = '#F6C445'
@@ -830,10 +832,10 @@ def main():
             fh.write(s.svg)
 
     entries = [
-        {'id': s.id, 'name': s.name, 'file': f'{s.id}.svg', 'category': s.category, 'tags': s.tags.split(',')}
+        {'id': s.id, 'name': s.name, 'file': f'{s.id}.webp', 'category': s.category, 'tags': s.tags.split(',')}
         for s in STICKERS
     ] + [
-        {'id': i, 'name': n, 'file': f'{i}.svg', 'category': 'classic', 'tags': t.split(',')}
+        {'id': i, 'name': n, 'file': f'{i}.webp', 'category': 'classic', 'tags': t.split(',')}
         for i, n, t in CLASSIC
     ]
     cats = [c for c, _ in CATEGORIES if c != 'all']

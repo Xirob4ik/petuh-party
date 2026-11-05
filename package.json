@@ -7,7 +7,8 @@
   "scripts": {
     "build": "node build.mjs",
     "start": "node dist/server.js",
-    "dev": "node build.mjs --dev"
+    "dev": "node build.mjs --dev",
+    "stickers": "python3 tools/stickers.py && node tools/rasterize.mjs"
   },
   "engines": {
     "node": ">=20"

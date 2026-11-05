@@ -17,7 +17,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "petya-hi",
     "name": "Привет",
-    "file": "petya-hi.svg",
+    "file": "petya-hi.webp",
     "category": "petya",
     "tags": [
       "привет",
@@ -30,7 +30,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "petya-lol",
     "name": "Ору",
-    "file": "petya-lol.svg",
+    "file": "petya-lol.webp",
     "category": "petya",
     "tags": [
       "ор",
@@ -46,7 +46,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "petya-ahaha",
     "name": "Ахаха",
-    "file": "petya-ahaha.svg",
+    "file": "petya-ahaha.webp",
     "category": "petya",
     "tags": [
       "ахаха",
@@ -59,7 +59,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "petya-cry",
     "name": "Шедевр",
-    "file": "petya-cry.svg",
+    "file": "petya-cry.webp",
     "category": "petya",
     "tags": [
       "шедевр",
@@ -74,7 +74,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "petya-sad",
     "name": "Грустно",
-    "file": "petya-sad.svg",
+    "file": "petya-sad.webp",
     "category": "petya",
     "tags": [
       "грустно",
@@ -86,7 +86,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "petya-shock",
     "name": "Что?!",
-    "file": "petya-shock.svg",
+    "file": "petya-shock.webp",
     "category": "petya",
     "tags": [
       "что",
@@ -101,7 +101,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "petya-angry",
     "name": "Бесит",
-    "file": "petya-angry.svg",
+    "file": "petya-angry.webp",
     "category": "petya",
     "tags": [
       "бесит",
@@ -114,7 +114,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "petya-love",
     "name": "Люблю",
-    "file": "petya-love.svg",
+    "file": "petya-love.webp",
     "category": "petya",
     "tags": [
       "люблю",
@@ -128,7 +128,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "petya-cool",
     "name": "База",
-    "file": "petya-cool.svg",
+    "file": "petya-cool.webp",
     "category": "petya",
     "tags": [
       "база",
@@ -143,7 +143,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "petya-think",
     "name": "Хмм",
-    "file": "petya-think.svg",
+    "file": "petya-think.webp",
     "category": "petya",
     "tags": [
       "хмм",
@@ -156,7 +156,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "petya-cringe",
     "name": "Кринж",
-    "file": "petya-cringe.svg",
+    "file": "petya-cringe.webp",
     "category": "petya",
     "tags": [
       "кринж",
@@ -169,7 +169,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "petya-dead",
     "name": "Всё",
-    "file": "petya-dead.svg",
+    "file": "petya-dead.webp",
     "category": "petya",
     "tags": [
       "всё",
@@ -183,7 +183,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "petya-wink",
     "name": "Хе-хе",
-    "file": "petya-wink.svg",
+    "file": "petya-wink.webp",
     "category": "petya",
     "tags": [
       "хехе",
@@ -195,7 +195,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "petya-awkward",
     "name": "Неловко",
-    "file": "petya-awkward.svg",
+    "file": "petya-awkward.webp",
     "category": "petya",
     "tags": [
       "неловко",
@@ -208,7 +208,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "petya-sleep",
     "name": "Скучно",
-    "file": "petya-sleep.svg",
+    "file": "petya-sleep.webp",
     "category": "petya",
     "tags": [
       "скучно",
@@ -222,7 +222,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "petya-yuck",
     "name": "Фу",
-    "file": "petya-yuck.svg",
+    "file": "petya-yuck.webp",
     "category": "petya",
     "tags": [
       "фу",
@@ -235,7 +235,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "petya-scream",
     "name": "Кукареку",
-    "file": "petya-scream.svg",
+    "file": "petya-scream.webp",
     "category": "petya",
     "tags": [
       "кукареку",
@@ -248,7 +248,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "petya-top",
     "name": "Топ",
-    "file": "petya-top.svg",
+    "file": "petya-top.webp",
     "category": "petya",
     "tags": [
       "топ",
@@ -262,7 +262,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "petya-star",
     "name": "Вау",
-    "file": "petya-star.svg",
+    "file": "petya-star.webp",
     "category": "petya",
     "tags": [
       "вау",
@@ -275,7 +275,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "cinema-popcorn",
     "name": "Где попкорн",
-    "file": "cinema-popcorn.svg",
+    "file": "cinema-popcorn.webp",
     "category": "cinema",
     "tags": [
       "попкорн",
@@ -288,7 +288,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "cinema-scared",
     "name": "Страшно",
-    "file": "cinema-scared.svg",
+    "file": "cinema-scared.webp",
     "category": "cinema",
     "tags": [
       "страшно",
@@ -302,7 +302,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "cinema-pause",
     "name": "Пауза!",
-    "file": "cinema-pause.svg",
+    "file": "cinema-pause.webp",
     "category": "cinema",
     "tags": [
       "пауза",
@@ -315,7 +315,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "cinema-play",
     "name": "Го смотреть",
-    "file": "cinema-play.svg",
+    "file": "cinema-play.webp",
     "category": "cinema",
     "tags": [
       "го",
@@ -329,7 +329,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "cinema-ff",
     "name": "Перемотай",
-    "file": "cinema-ff.svg",
+    "file": "cinema-ff.webp",
     "category": "cinema",
     "tags": [
       "перемотай",
@@ -343,7 +343,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "cinema-spoiler",
     "name": "Без спойлеров",
-    "file": "cinema-spoiler.svg",
+    "file": "cinema-spoiler.webp",
     "category": "cinema",
     "tags": [
       "спойлер",
@@ -357,7 +357,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "cinema-next",
     "name": "Ещё серию",
-    "file": "cinema-next.svg",
+    "file": "cinema-next.webp",
     "category": "cinema",
     "tags": [
       "ещё серию",
@@ -370,7 +370,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "cinema-remote",
     "name": "Пульт мой",
-    "file": "cinema-remote.svg",
+    "file": "cinema-remote.webp",
     "category": "cinema",
     "tags": [
       "пульт",
@@ -383,7 +383,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "cinema-tissues",
     "name": "Дайте салфетку",
-    "file": "cinema-tissues.svg",
+    "file": "cinema-tissues.webp",
     "category": "cinema",
     "tags": [
       "салфетки",
@@ -396,7 +396,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "cinema-ticket",
     "name": "Билет",
-    "file": "cinema-ticket.svg",
+    "file": "cinema-ticket.webp",
     "category": "cinema",
     "tags": [
       "билет",
@@ -409,7 +409,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "cinema-clapper",
     "name": "Дубль",
-    "file": "cinema-clapper.svg",
+    "file": "cinema-clapper.webp",
     "category": "cinema",
     "tags": [
       "хлопушка",
@@ -422,7 +422,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "cinema-3d",
     "name": "3D",
-    "file": "cinema-3d.svg",
+    "file": "cinema-3d.webp",
     "category": "cinema",
     "tags": [
       "3d",
@@ -435,7 +435,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "cinema-fire",
     "name": "Огонь",
-    "file": "cinema-fire.svg",
+    "file": "cinema-fire.webp",
     "category": "cinema",
     "tags": [
       "огонь",
@@ -449,7 +449,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "cinema-heart",
     "name": "Сердечко",
-    "file": "cinema-heart.svg",
+    "file": "cinema-heart.webp",
     "category": "cinema",
     "tags": [
       "сердце",
@@ -462,7 +462,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "cinema-broken",
     "name": "Разбитое сердце",
-    "file": "cinema-broken.svg",
+    "file": "cinema-broken.webp",
     "category": "cinema",
     "tags": [
       "разбитое сердце",
@@ -475,7 +475,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "cinema-skull",
     "name": "Череп",
-    "file": "cinema-skull.svg",
+    "file": "cinema-skull.webp",
     "category": "cinema",
     "tags": [
       "череп",
@@ -489,7 +489,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "cinema-ghost",
     "name": "Бу",
-    "file": "cinema-ghost.svg",
+    "file": "cinema-ghost.webp",
     "category": "cinema",
     "tags": [
       "призрак",
@@ -503,7 +503,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "sync-lag",
     "name": "Лагает",
-    "file": "sync-lag.svg",
+    "file": "sync-lag.webp",
     "category": "phrases",
     "tags": [
       "лагает",
@@ -517,7 +517,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "sync-catchup",
     "name": "Догоняю",
-    "file": "sync-catchup.svg",
+    "file": "sync-catchup.webp",
     "category": "phrases",
     "tags": [
       "догоняю",
@@ -530,7 +530,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "sync-where",
     "name": "Ты где?",
-    "file": "sync-where.svg",
+    "file": "sync-where.webp",
     "category": "phrases",
     "tags": [
       "ты где",
@@ -542,7 +542,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "sync-wait",
     "name": "Жду",
-    "file": "sync-wait.svg",
+    "file": "sync-wait.webp",
     "category": "phrases",
     "tags": [
       "жду",
@@ -555,7 +555,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "sync-ready",
     "name": "Готов",
-    "file": "sync-ready.svg",
+    "file": "sync-ready.webp",
     "category": "phrases",
     "tags": [
       "готов",
@@ -568,7 +568,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "sync-sound",
     "name": "Нет звука",
-    "file": "sync-sound.svg",
+    "file": "sync-sound.webp",
     "category": "phrases",
     "tags": [
       "звук",
@@ -581,7 +581,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "sync-sleep",
     "name": "Спать",
-    "file": "sync-sleep.svg",
+    "file": "sync-sleep.webp",
     "category": "phrases",
     "tags": [
       "спать",
@@ -594,7 +594,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "sync-gg",
     "name": "ГГ",
-    "file": "sync-gg.svg",
+    "file": "sync-gg.webp",
     "category": "phrases",
     "tags": [
       "гг",
@@ -608,7 +608,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "sync-again",
     "name": "Ещё раз",
-    "file": "sync-again.svg",
+    "file": "sync-again.webp",
     "category": "phrases",
     "tags": [
       "ещё раз",
@@ -621,7 +621,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "sync-party",
     "name": "Пати",
-    "file": "sync-party.svg",
+    "file": "sync-party.webp",
     "category": "phrases",
     "tags": [
       "пати",
@@ -634,7 +634,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "chick-hatch",
     "name": "Вылупился",
-    "file": "chick-hatch.svg",
+    "file": "chick-hatch.webp",
     "category": "chicks",
     "tags": [
       "цыплёнок",
@@ -648,7 +648,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "chick-cute",
     "name": "Мимими",
-    "file": "chick-cute.svg",
+    "file": "chick-cute.webp",
     "category": "chicks",
     "tags": [
       "мимими",
@@ -661,7 +661,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "chick-cry",
     "name": "Плачет",
-    "file": "chick-cry.svg",
+    "file": "chick-cry.webp",
     "category": "chicks",
     "tags": [
       "цыплёнок",
@@ -674,7 +674,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "chick-shock",
     "name": "Ой",
-    "file": "chick-shock.svg",
+    "file": "chick-shock.webp",
     "category": "chicks",
     "tags": [
       "ой",
@@ -687,7 +687,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "chick-love",
     "name": "Обнимашки",
-    "file": "chick-love.svg",
+    "file": "chick-love.webp",
     "category": "chicks",
     "tags": [
       "обнимашки",
@@ -700,7 +700,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "chick-angry",
     "name": "Злюка",
-    "file": "chick-angry.svg",
+    "file": "chick-angry.webp",
     "category": "chicks",
     "tags": [
       "злой",
@@ -712,7 +712,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-001",
     "name": "Разорву на тебе бельё",
-    "file": "x-001.svg",
+    "file": "x-001.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -722,7 +722,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-002",
     "name": "Кончу на твою одежду",
-    "file": "x-002.svg",
+    "file": "x-002.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -732,7 +732,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-003",
     "name": "Кончу на лицо",
-    "file": "x-003.svg",
+    "file": "x-003.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -742,7 +742,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-004",
     "name": "Кончу на жопу",
-    "file": "x-004.svg",
+    "file": "x-004.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -752,7 +752,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-005",
     "name": "Ебля будет долгой",
-    "file": "x-005.svg",
+    "file": "x-005.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -762,7 +762,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-006",
     "name": "Придушу немного",
-    "file": "x-006.svg",
+    "file": "x-006.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -772,7 +772,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-007",
     "name": "Отлуплю",
-    "file": "x-007.svg",
+    "file": "x-007.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -782,7 +782,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-008",
     "name": "Размажу сперму по лицу",
-    "file": "x-008.svg",
+    "file": "x-008.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -792,7 +792,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-009",
     "name": "Накачаю спермой",
-    "file": "x-009.svg",
+    "file": "x-009.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -802,7 +802,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-010",
     "name": "Будешь вещью",
-    "file": "x-010.svg",
+    "file": "x-010.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -812,7 +812,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-011",
     "name": "Выебу на столе",
-    "file": "x-011.svg",
+    "file": "x-011.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -822,7 +822,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-012",
     "name": "Трахну в душе",
-    "file": "x-012.svg",
+    "file": "x-012.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -832,7 +832,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-013",
     "name": "Куни для начала",
-    "file": "x-013.svg",
+    "file": "x-013.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -842,7 +842,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-014",
     "name": "Поиграю пальцами с пиздой",
-    "file": "x-014.svg",
+    "file": "x-014.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -852,7 +852,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-015",
     "name": "Обматерю",
-    "file": "x-015.svg",
+    "file": "x-015.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -862,7 +862,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-016",
     "name": "Засуну пальцы в рот",
-    "file": "x-016.svg",
+    "file": "x-016.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -872,7 +872,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-017",
     "name": "Трусы сними губами",
-    "file": "x-017.svg",
+    "file": "x-017.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -882,7 +882,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-018",
     "name": "Порву твои трусы",
-    "file": "x-018.svg",
+    "file": "x-018.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -892,7 +892,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-019",
     "name": "Трахну в машине",
-    "file": "x-019.svg",
+    "file": "x-019.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -902,7 +902,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-020",
     "name": "Ебу неспеша",
-    "file": "x-020.svg",
+    "file": "x-020.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -912,7 +912,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-021",
     "name": "Ебу в три захода",
-    "file": "x-021.svg",
+    "file": "x-021.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -922,7 +922,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-022",
     "name": "Кончишь от анала",
-    "file": "x-022.svg",
+    "file": "x-022.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -932,7 +932,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-023",
     "name": "Кончаем одновре- менно?",
-    "file": "x-023.svg",
+    "file": "x-023.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -942,7 +942,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-024",
     "name": "Я свингер",
-    "file": "x-024.svg",
+    "file": "x-024.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -952,7 +952,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-025",
     "name": "Смена партнёров?",
-    "file": "x-025.svg",
+    "file": "x-025.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -962,7 +962,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-026",
     "name": "Пущу тебя по кругу",
-    "file": "x-026.svg",
+    "file": "x-026.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -972,7 +972,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-027",
     "name": "Ебаться и кричать!",
-    "file": "x-027.svg",
+    "file": "x-027.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -982,7 +982,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-028",
     "name": "Люблю орать",
-    "file": "x-028.svg",
+    "file": "x-028.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -992,7 +992,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-029",
     "name": "Буду кусать",
-    "file": "x-029.svg",
+    "file": "x-029.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1002,7 +1002,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-030",
     "name": "Я страстный",
-    "file": "x-030.svg",
+    "file": "x-030.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1012,7 +1012,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-031",
     "name": "Вылижу твою попку",
-    "file": "x-031.svg",
+    "file": "x-031.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1022,7 +1022,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-032",
     "name": "Хочу ласкать киску",
-    "file": "x-032.svg",
+    "file": "x-032.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1032,7 +1032,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-033",
     "name": "Пальцами в киску",
-    "file": "x-033.svg",
+    "file": "x-033.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1042,7 +1042,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-034",
     "name": "Мои пальцы — умелые",
-    "file": "x-034.svg",
+    "file": "x-034.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1052,7 +1052,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-035",
     "name": "Люблю жёстко",
-    "file": "x-035.svg",
+    "file": "x-035.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1062,7 +1062,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-036",
     "name": "Кончу на грудь",
-    "file": "x-036.svg",
+    "file": "x-036.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1072,7 +1072,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-037",
     "name": "Буду трахать и любоваться",
-    "file": "x-037.svg",
+    "file": "x-037.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1082,7 +1082,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-038",
     "name": "Не закрывай глаза...",
-    "file": "x-038.svg",
+    "file": "x-038.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1092,7 +1092,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-039",
     "name": "Хуй большой примешь?",
-    "file": "x-039.svg",
+    "file": "x-039.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1102,7 +1102,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-040",
     "name": "У меня не маленький",
-    "file": "x-040.svg",
+    "file": "x-040.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1112,7 +1112,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-041",
     "name": "Будешь рабочей глоткой",
-    "file": "x-041.svg",
+    "file": "x-041.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1122,7 +1122,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-042",
     "name": "Привяжу тебя к кровати...",
-    "file": "x-042.svg",
+    "file": "x-042.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1132,7 +1132,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-043",
     "name": "Люблю горячих штучек",
-    "file": "x-043.svg",
+    "file": "x-043.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1142,7 +1142,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-044",
     "name": "Буду мучать соски",
-    "file": "x-044.svg",
+    "file": "x-044.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1152,7 +1152,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-045",
     "name": "Люблю делать больно",
-    "file": "x-045.svg",
+    "file": "x-045.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1162,7 +1162,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-046",
     "name": "Доминант",
-    "file": "x-046.svg",
+    "file": "x-046.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1172,7 +1172,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-047",
     "name": "Так тебя ещё не ебали",
-    "file": "x-047.svg",
+    "file": "x-047.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1182,7 +1182,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-048",
     "name": "Лижи хуй",
-    "file": "x-048.svg",
+    "file": "x-048.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1192,7 +1192,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-049",
     "name": "Посасывай член",
-    "file": "x-049.svg",
+    "file": "x-049.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1202,7 +1202,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-050",
     "name": "Заткну тебе рот",
-    "file": "x-050.svg",
+    "file": "x-050.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1212,7 +1212,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-051",
     "name": "Подрочу тобой",
-    "file": "x-051.svg",
+    "file": "x-051.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1222,7 +1222,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-052",
     "name": "Твоя дыра только моя",
-    "file": "x-052.svg",
+    "file": "x-052.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1232,7 +1232,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-053",
     "name": "Мой член тебе по размеру",
-    "file": "x-053.svg",
+    "file": "x-053.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1242,7 +1242,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-054",
     "name": "Вылизывай мне жопу",
-    "file": "x-054.svg",
+    "file": "x-054.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1252,7 +1252,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-055",
     "name": "Лижи яйца",
-    "file": "x-055.svg",
+    "file": "x-055.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1262,7 +1262,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-056",
     "name": "Буду плевать на тебя...",
-    "file": "x-056.svg",
+    "file": "x-056.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1272,7 +1272,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-057",
     "name": "Вылижешь мои трусы",
-    "file": "x-057.svg",
+    "file": "x-057.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1282,7 +1282,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-058",
     "name": "Ношу бельё несколько дней",
-    "file": "x-058.svg",
+    "file": "x-058.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1292,7 +1292,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-059",
     "name": "Буду орать на тебя",
-    "file": "x-059.svg",
+    "file": "x-059.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1302,7 +1302,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-060",
     "name": "Проси прощения на коленях",
-    "file": "x-060.svg",
+    "file": "x-060.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1312,7 +1312,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-061",
     "name": "Выебу в позе монашки",
-    "file": "x-061.svg",
+    "file": "x-061.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1322,7 +1322,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-062",
     "name": "Проси чтоб трахал глубже",
-    "file": "x-062.svg",
+    "file": "x-062.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1332,7 +1332,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-063",
     "name": "Хочу кончить, когда ты плачешь",
-    "file": "x-063.svg",
+    "file": "x-063.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1342,7 +1342,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-064",
     "name": "Кончаю на лицо — не закрывай глаза",
-    "file": "x-064.svg",
+    "file": "x-064.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1352,7 +1352,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-065",
     "name": "Жди голой в кровати",
-    "file": "x-065.svg",
+    "file": "x-065.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1362,7 +1362,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-066",
     "name": "Побрею твою киску",
-    "file": "x-066.svg",
+    "file": "x-066.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1372,7 +1372,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-067",
     "name": "Сядь киской на лицо",
-    "file": "x-067.svg",
+    "file": "x-067.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1382,7 +1382,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-068",
     "name": "Отфистингую рукой",
-    "file": "x-068.svg",
+    "file": "x-068.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1392,7 +1392,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-069",
     "name": "Выебу фаллосом",
-    "file": "x-069.svg",
+    "file": "x-069.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1402,7 +1402,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-070",
     "name": "Сфоткаемся во время секса?",
-    "file": "x-070.svg",
+    "file": "x-070.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1412,7 +1412,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-071",
     "name": "Хочу ласкать твои ушки",
-    "file": "x-071.svg",
+    "file": "x-071.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1422,7 +1422,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-072",
     "name": "Засосов будет много",
-    "file": "x-072.svg",
+    "file": "x-072.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1432,7 +1432,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-073",
     "name": "Можешь орать — меня это возбуждает",
-    "file": "x-073.svg",
+    "file": "x-073.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1442,7 +1442,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-074",
     "name": "Обслуживай послушно",
-    "file": "x-074.svg",
+    "file": "x-074.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1452,7 +1452,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-075",
     "name": "Сжимай мой член внутри себя",
-    "file": "x-075.svg",
+    "file": "x-075.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1462,7 +1462,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-076",
     "name": "Ебу на вылет",
-    "file": "x-076.svg",
+    "file": "x-076.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1472,7 +1472,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-077",
     "name": "Ебу по подливе",
-    "file": "x-077.svg",
+    "file": "x-077.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1482,7 +1482,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-078",
     "name": "Хочу секс",
-    "file": "x-078.svg",
+    "file": "x-078.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1492,7 +1492,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-079",
     "name": "Терпи — не захлеб- нёшься",
-    "file": "x-079.svg",
+    "file": "x-079.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1502,7 +1502,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-080",
     "name": "Попрыгаешь на мне?",
-    "file": "x-080.svg",
+    "file": "x-080.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1512,7 +1512,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-081",
     "name": "Подрочу на тебя",
-    "file": "x-081.svg",
+    "file": "x-081.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1522,7 +1522,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-082",
     "name": "Расскажи свои фантазии",
-    "file": "x-082.svg",
+    "file": "x-082.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1532,7 +1532,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-083",
     "name": "Голое фото жду...",
-    "file": "x-083.svg",
+    "file": "x-083.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1542,7 +1542,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-084",
     "name": "Возбуди меня",
-    "file": "x-084.svg",
+    "file": "x-084.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1552,7 +1552,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-085",
     "name": "Заслужи мой хуй",
-    "file": "x-085.svg",
+    "file": "x-085.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1562,7 +1562,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-086",
     "name": "Обслужишь нас с другом?",
-    "file": "x-086.svg",
+    "file": "x-086.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1572,7 +1572,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-087",
     "name": "Продержишься долго... дам денег",
-    "file": "x-087.svg",
+    "file": "x-087.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1582,7 +1582,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-088",
     "name": "Люблю продажных",
-    "file": "x-088.svg",
+    "file": "x-088.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1592,7 +1592,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-089",
     "name": "Сегодня ты шлюха",
-    "file": "x-089.svg",
+    "file": "x-089.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1602,7 +1602,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-090",
     "name": "Я очень плохой парень",
-    "file": "x-090.svg",
+    "file": "x-090.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1612,7 +1612,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-091",
     "name": "Я жиголо",
-    "file": "x-091.svg",
+    "file": "x-091.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1622,7 +1622,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-092",
     "name": "Исполню твои фантазии",
-    "file": "x-092.svg",
+    "file": "x-092.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1632,7 +1632,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-093",
     "name": "Хуй широкий",
-    "file": "x-093.svg",
+    "file": "x-093.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1642,7 +1642,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-094",
     "name": "Хуй толстый",
-    "file": "x-094.svg",
+    "file": "x-094.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1652,7 +1652,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-095",
     "name": "Хуй длинный",
-    "file": "x-095.svg",
+    "file": "x-095.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1662,7 +1662,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-096",
     "name": "Стоит долго",
-    "file": "x-096.svg",
+    "file": "x-096.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1672,7 +1672,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-097",
     "name": "Возбуди прикосно- вениями",
-    "file": "x-097.svg",
+    "file": "x-097.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1682,7 +1682,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-098",
     "name": "Хочу гладить твои коленки",
-    "file": "x-098.svg",
+    "file": "x-098.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1692,7 +1692,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-001",
     "name": "Запретные женские желания",
-    "file": "y-001.svg",
+    "file": "y-001.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1702,7 +1702,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-002",
     "name": "Я теку",
-    "file": "y-002.svg",
+    "file": "y-002.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1712,7 +1712,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-003",
     "name": "Только не в рот",
-    "file": "y-003.svg",
+    "file": "y-003.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1722,7 +1722,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-004",
     "name": "Параметры?",
-    "file": "y-004.svg",
+    "file": "y-004.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1732,7 +1732,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-005",
     "name": "Страпон хочешь?",
-    "file": "y-005.svg",
+    "file": "y-005.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1742,7 +1742,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-006",
     "name": "Презервативы купи к чаю!",
-    "file": "y-006.svg",
+    "file": "y-006.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1752,7 +1752,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-007",
     "name": "Хочу на глаза повязку",
-    "file": "y-007.svg",
+    "file": "y-007.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1762,7 +1762,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-008",
     "name": "Я была плохой девочкой",
-    "file": "y-008.svg",
+    "file": "y-008.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1772,7 +1772,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-009",
     "name": "Кончи на лицо",
-    "file": "y-009.svg",
+    "file": "y-009.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1782,7 +1782,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-010",
     "name": "Обижаешь меня постоянно...",
-    "file": "y-010.svg",
+    "file": "y-010.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1792,7 +1792,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-011",
     "name": "Будь груб со мной",
-    "file": "y-011.svg",
+    "file": "y-011.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1802,7 +1802,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-012",
     "name": "Ласкай мои груди",
-    "file": "y-012.svg",
+    "file": "y-012.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1812,7 +1812,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-013",
     "name": "Стенки моего влагалища — хотят твой член",
-    "file": "y-013.svg",
+    "file": "y-013.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1822,7 +1822,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-014",
     "name": "Губами ласкай мои ножки",
-    "file": "y-014.svg",
+    "file": "y-014.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1832,7 +1832,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-015",
     "name": "Ласкай мою киску",
-    "file": "y-015.svg",
+    "file": "y-015.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1842,7 +1842,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-016",
     "name": "Обращайся, как с проституткой",
-    "file": "y-016.svg",
+    "file": "y-016.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1852,7 +1852,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-017",
     "name": "Мои половые губы — обуздают тебя",
-    "file": "y-017.svg",
+    "file": "y-017.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1862,7 +1862,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-018",
     "name": "Оседлаю тебя!",
-    "file": "y-018.svg",
+    "file": "y-018.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1872,7 +1872,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-019",
     "name": "Моя пизда — маленькое озеро",
-    "file": "y-019.svg",
+    "file": "y-019.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1882,7 +1882,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-020",
     "name": "Еби меня",
-    "file": "y-020.svg",
+    "file": "y-020.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1892,7 +1892,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-021",
     "name": "Хочу твой большой член!",
-    "file": "y-021.svg",
+    "file": "y-021.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1902,7 +1902,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-022",
     "name": "Мой рот примет всё",
-    "file": "y-022.svg",
+    "file": "y-022.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1912,7 +1912,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-023",
     "name": "У меня много тайных фантазий...",
-    "file": "y-023.svg",
+    "file": "y-023.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1922,7 +1922,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-024",
     "name": "Жене не скажем...",
-    "file": "y-024.svg",
+    "file": "y-024.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1932,7 +1932,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-025",
     "name": "Захвати друга",
-    "file": "y-025.svg",
+    "file": "y-025.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1942,7 +1942,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-026",
     "name": "Буду бесстыжей",
-    "file": "y-026.svg",
+    "file": "y-026.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1952,7 +1952,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-027",
     "name": "Я лучшее, что с тобой произошло",
-    "file": "y-027.svg",
+    "file": "y-027.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1962,7 +1962,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-028",
     "name": "Заслужи секс со мной!",
-    "file": "y-028.svg",
+    "file": "y-028.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1972,7 +1972,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-029",
     "name": "Думаю о тебе",
-    "file": "y-029.svg",
+    "file": "y-029.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1982,7 +1982,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-030",
     "name": "Ты мой самец",
-    "file": "y-030.svg",
+    "file": "y-030.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -1992,7 +1992,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-031",
     "name": "Возьми меня...",
-    "file": "y-031.svg",
+    "file": "y-031.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2002,7 +2002,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-032",
     "name": "Я согласна на всё!",
-    "file": "y-032.svg",
+    "file": "y-032.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2012,7 +2012,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-033",
     "name": "Покорна только тебе!",
-    "file": "y-033.svg",
+    "file": "y-033.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2022,7 +2022,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-034",
     "name": "Завоюй меня!",
-    "file": "y-034.svg",
+    "file": "y-034.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2032,7 +2032,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-035",
     "name": "Лучше на животик",
-    "file": "y-035.svg",
+    "file": "y-035.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2042,7 +2042,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-036",
     "name": "Нравится сперма",
-    "file": "y-036.svg",
+    "file": "y-036.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2052,7 +2052,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-037",
     "name": "Губами целуй попу",
-    "file": "y-037.svg",
+    "file": "y-037.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2062,7 +2062,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-038",
     "name": "Меня это не возбуждает",
-    "file": "y-038.svg",
+    "file": "y-038.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2072,7 +2072,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-039",
     "name": "Секс в необычном месте...",
-    "file": "y-039.svg",
+    "file": "y-039.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2082,7 +2082,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-040",
     "name": "С тобой и твоим другом",
-    "file": "y-040.svg",
+    "file": "y-040.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2092,7 +2092,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-041",
     "name": "Бери друга к нам!",
-    "file": "y-041.svg",
+    "file": "y-041.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2102,7 +2102,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-042",
     "name": "У меня есть вибратор...",
-    "file": "y-042.svg",
+    "file": "y-042.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2112,7 +2112,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-043",
     "name": "Хочу разнообразия в сексе!!!",
-    "file": "y-043.svg",
+    "file": "y-043.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2122,7 +2122,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-044",
     "name": "Родителей дома нет!",
-    "file": "y-044.svg",
+    "file": "y-044.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2132,7 +2132,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-045",
     "name": "Целуй мои ушки",
-    "file": "y-045.svg",
+    "file": "y-045.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2142,7 +2142,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-046",
     "name": "Ласкай мочки...",
-    "file": "y-046.svg",
+    "file": "y-046.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2152,7 +2152,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-047",
     "name": "Хочу массаж",
-    "file": "y-047.svg",
+    "file": "y-047.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2162,7 +2162,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-048",
     "name": "Сделаю тебе массаж",
-    "file": "y-048.svg",
+    "file": "y-048.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2172,7 +2172,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-049",
     "name": "Это ножки — королевы! Заслужи их!",
-    "file": "y-049.svg",
+    "file": "y-049.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2182,7 +2182,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-050",
     "name": "Сядь задницей на лицо",
-    "file": "y-050.svg",
+    "file": "y-050.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2192,7 +2192,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-051",
     "name": "Пальцами поиграй",
-    "file": "y-051.svg",
+    "file": "y-051.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2202,7 +2202,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-052",
     "name": "Будь нежнее со мной...",
-    "file": "y-052.svg",
+    "file": "y-052.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2212,7 +2212,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-053",
     "name": "Обзывай меня грубо",
-    "file": "y-053.svg",
+    "file": "y-053.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2222,7 +2222,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-054",
     "name": "Поиграем...?",
-    "file": "y-054.svg",
+    "file": "y-054.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2232,7 +2232,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-055",
     "name": "Сожги мои калории!",
-    "file": "y-055.svg",
+    "file": "y-055.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2242,7 +2242,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-056",
     "name": "Ты ещё узнаешь мой ротик",
-    "file": "y-056.svg",
+    "file": "y-056.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2252,7 +2252,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-057",
     "name": "Подрочи мой клитор",
-    "file": "y-057.svg",
+    "file": "y-057.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2262,7 +2262,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-058",
     "name": "Слегка подуши!",
-    "file": "y-058.svg",
+    "file": "y-058.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2272,7 +2272,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-059",
     "name": "Целуй пупок...",
-    "file": "y-059.svg",
+    "file": "y-059.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2282,7 +2282,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-060",
     "name": "Раздевай меня медленно",
-    "file": "y-060.svg",
+    "file": "y-060.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2292,7 +2292,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-061",
     "name": "Целуй грудь сквозь бельё",
-    "file": "y-061.svg",
+    "file": "y-061.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2302,7 +2302,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-062",
     "name": "Я твоя госпожа",
-    "file": "y-062.svg",
+    "file": "y-062.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2312,7 +2312,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-063",
     "name": "Ты мой раб!",
-    "file": "y-063.svg",
+    "file": "y-063.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2322,7 +2322,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-064",
     "name": "Выпори меня",
-    "file": "y-064.svg",
+    "file": "y-064.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2332,7 +2332,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-065",
     "name": "Я буду тебя пороть...",
-    "file": "y-065.svg",
+    "file": "y-065.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2342,7 +2342,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-066",
     "name": "Отшлёпай",
-    "file": "y-066.svg",
+    "file": "y-066.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2352,7 +2352,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-067",
     "name": "Трахай, как суку",
-    "file": "y-067.svg",
+    "file": "y-067.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2362,7 +2362,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-068",
     "name": "Сисечки помни",
-    "file": "y-068.svg",
+    "file": "y-068.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2372,7 +2372,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-069",
     "name": "Клитор ласкай",
-    "file": "y-069.svg",
+    "file": "y-069.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2382,7 +2382,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-070",
     "name": "Хочу кусать тебя везде",
-    "file": "y-070.svg",
+    "file": "y-070.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2392,7 +2392,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-071",
     "name": "Я кусаюсь...",
-    "file": "y-071.svg",
+    "file": "y-071.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2402,7 +2402,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-072",
     "name": "Засосов будет много...",
-    "file": "y-072.svg",
+    "file": "y-072.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2412,7 +2412,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-073",
     "name": "Я же любовница...",
-    "file": "y-073.svg",
+    "file": "y-073.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2422,7 +2422,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-074",
     "name": "Хочу реализовать...",
-    "file": "y-074.svg",
+    "file": "y-074.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2432,7 +2432,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-075",
     "name": "Тебе в ротик",
-    "file": "y-075.svg",
+    "file": "y-075.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2442,7 +2442,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-076",
     "name": "Еби так, чтоб очко не закрывалось",
-    "file": "y-076.svg",
+    "file": "y-076.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2452,7 +2452,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-077",
     "name": "Развальцуй очко",
-    "file": "y-077.svg",
+    "file": "y-077.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2462,7 +2462,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-078",
     "name": "Оближи мои ноги",
-    "file": "y-078.svg",
+    "file": "y-078.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2472,7 +2472,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-079",
     "name": "В позе монахини",
-    "file": "y-079.svg",
+    "file": "y-079.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2482,7 +2482,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-080",
     "name": "Ты снизу",
-    "file": "y-080.svg",
+    "file": "y-080.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2492,7 +2492,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-081",
     "name": "Ты сверху",
-    "file": "y-081.svg",
+    "file": "y-081.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2502,7 +2502,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-082",
     "name": "Ты давалка?",
-    "file": "y-082.svg",
+    "file": "y-082.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2512,7 +2512,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-083",
     "name": "Сегодня не дам",
-    "file": "y-083.svg",
+    "file": "y-083.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2522,7 +2522,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-084",
     "name": "Я не такая...",
-    "file": "y-084.svg",
+    "file": "y-084.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2532,7 +2532,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-085",
     "name": "Сначала мусор вынеси — потом поебёмся",
-    "file": "y-085.svg",
+    "file": "y-085.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2542,7 +2542,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-086",
     "name": "Хочу секс в душе",
-    "file": "y-086.svg",
+    "file": "y-086.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2552,7 +2552,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-087",
     "name": "Ой всё",
-    "file": "y-087.svg",
+    "file": "y-087.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2562,7 +2562,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-088",
     "name": "А ты сможешь трахать пару часов?",
-    "file": "y-088.svg",
+    "file": "y-088.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2572,7 +2572,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-089",
     "name": "Все мужики одинаковые",
-    "file": "y-089.svg",
+    "file": "y-089.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2582,7 +2582,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-090",
     "name": "Сделаю из тебя мужчину!",
-    "file": "y-090.svg",
+    "file": "y-090.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2592,7 +2592,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-091",
     "name": "В жопу дам",
-    "file": "y-091.svg",
+    "file": "y-091.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2602,7 +2602,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-092",
     "name": "Хочешь анал?",
-    "file": "y-092.svg",
+    "file": "y-092.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2612,7 +2612,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-093",
     "name": "Куннилингус любишь делать?",
-    "file": "y-093.svg",
+    "file": "y-093.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2622,7 +2622,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-094",
     "name": "Хочу куни",
-    "file": "y-094.svg",
+    "file": "y-094.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2632,7 +2632,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-095",
     "name": "Хочу большой",
-    "file": "y-095.svg",
+    "file": "y-095.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2642,7 +2642,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-096",
     "name": "В ротик или на животик?",
-    "file": "y-096.svg",
+    "file": "y-096.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2652,7 +2652,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-097",
     "name": "Я за деньги",
-    "file": "y-097.svg",
+    "file": "y-097.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2662,7 +2662,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-098",
     "name": "Ищу нежадного мужчину",
-    "file": "y-098.svg",
+    "file": "y-098.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2672,7 +2672,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-099",
     "name": "Приглашу поебаться",
-    "file": "y-099.svg",
+    "file": "y-099.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2682,7 +2682,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-100",
     "name": "Приеду на секс",
-    "file": "y-100.svg",
+    "file": "y-100.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2692,7 +2692,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-101",
     "name": "Сосу с проглотом",
-    "file": "y-101.svg",
+    "file": "y-101.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2702,7 +2702,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-102",
     "name": "Хуем до горла",
-    "file": "y-102.svg",
+    "file": "y-102.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2712,7 +2712,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-103",
     "name": "Вылижу тебе задницу",
-    "file": "y-103.svg",
+    "file": "y-103.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2722,7 +2722,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-104",
     "name": "Ищу только XL",
-    "file": "y-104.svg",
+    "file": "y-104.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2732,7 +2732,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-105",
     "name": "Больше 20",
-    "file": "y-105.svg",
+    "file": "y-105.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2742,7 +2742,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-106",
     "name": "В рот и в зад",
-    "file": "y-106.svg",
+    "file": "y-106.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2752,7 +2752,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-107",
     "name": "Фистинг",
-    "file": "y-107.svg",
+    "file": "y-107.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2762,7 +2762,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-108",
     "name": "3Д",
-    "file": "y-108.svg",
+    "file": "y-108.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2772,7 +2772,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-109",
     "name": "Хочу анальные шарики",
-    "file": "y-109.svg",
+    "file": "y-109.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2782,7 +2782,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-110",
     "name": "Попробуем с девайсами?",
-    "file": "y-110.svg",
+    "file": "y-110.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2792,7 +2792,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-111",
     "name": "Свяжи меня",
-    "file": "y-111.svg",
+    "file": "y-111.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2802,7 +2802,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-112",
     "name": "Хочу в два члена",
-    "file": "y-112.svg",
+    "file": "y-112.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2812,7 +2812,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-113",
     "name": "Фото во время секса",
-    "file": "y-113.svg",
+    "file": "y-113.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2822,7 +2822,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "y-114",
     "name": "Не даю",
-    "file": "y-114.svg",
+    "file": "y-114.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2832,7 +2832,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "x-love-anal",
     "name": "I love anal",
-    "file": "x-love-anal.svg",
+    "file": "x-love-anal.webp",
     "category": "adult",
     "tags": [
       "18+",
@@ -2844,7 +2844,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "petuh-cool",
     "name": "Petuh Boss",
-    "file": "petuh-cool.svg",
+    "file": "petuh-cool.webp",
     "category": "classic",
     "tags": [
       "петух",
@@ -2858,7 +2858,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "petuh-popcorn",
     "name": "Петух-киноман",
-    "file": "petuh-popcorn.svg",
+    "file": "petuh-popcorn.webp",
     "category": "classic",
     "tags": [
       "петух",
@@ -2870,7 +2870,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "petuh-shock",
     "name": "Петух в шоке",
-    "file": "petuh-shock.svg",
+    "file": "petuh-shock.webp",
     "category": "classic",
     "tags": [
       "петух",
@@ -2882,7 +2882,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "petuh-cry",
     "name": "Шедевр",
-    "file": "petuh-cry.svg",
+    "file": "petuh-cry.webp",
     "category": "classic",
     "tags": [
       "петух",
@@ -2894,7 +2894,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "petuh-cringe",
     "name": "Петух-кринж",
-    "file": "petuh-cringe.svg",
+    "file": "petuh-cringe.webp",
     "category": "classic",
     "tags": [
       "петух",
@@ -2905,7 +2905,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "petuh-party",
     "name": "Petuh Party",
-    "file": "petuh-party.svg",
+    "file": "petuh-party.webp",
     "category": "classic",
     "tags": [
       "петух",
@@ -2917,7 +2917,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "petuh-sleep",
     "name": "Петух заснул",
-    "file": "petuh-sleep.svg",
+    "file": "petuh-sleep.webp",
     "category": "classic",
     "tags": [
       "петух",
@@ -2929,7 +2929,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "petuh-chad",
     "name": "Гигачад-петух",
-    "file": "petuh-chad.svg",
+    "file": "petuh-chad.webp",
     "category": "classic",
     "tags": [
       "петух",
@@ -2941,7 +2941,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "petuh-dj",
     "name": "DJ Петух",
-    "file": "petuh-dj.svg",
+    "file": "petuh-dj.webp",
     "category": "classic",
     "tags": [
       "петух",
@@ -2953,7 +2953,7 @@ export const STICKERS: Sticker[] = [
   {
     "id": "popcorn-gold",
     "name": "Топ контент",
-    "file": "popcorn-gold.svg",
+    "file": "popcorn-gold.webp",
     "category": "classic",
     "tags": [
       "попкорн",
