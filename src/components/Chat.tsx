@@ -88,9 +88,18 @@ export function Chat({
     el.style.height = Math.min(el.scrollHeight, 120) + 'px';
   }, [text]);
 
+  // «пользователь ушёл вверх» решаем только по его собственной прокрутке: сдвиги от появления
+  // клавиатуры, плашки ответа или меню реакций не должны отрывать чат от последних сообщений
+  const userScroll = useRef(0);
+  const markUserScroll = (ms: number) => (userScroll.current = Date.now() + ms);
   const onScroll = () => {
     const el = listRef.current;
-    if (el) stick.current = el.scrollHeight - el.scrollTop - el.clientHeight < 60;
+    if (!el) return;
+    if (Date.now() > userScroll.current) {
+      if (stick.current) el.scrollTop = el.scrollHeight;
+      return;
+    }
+    stick.current = el.scrollHeight - el.scrollTop - el.clientHeight < 60;
   };
 
   const send = () => {
@@ -153,6 +162,15 @@ export function Chat({
   };
 
   const sheetAt = useRef(0);
+  // на телефоне кнопки реакции и ответа видны прямо под каждым сообщением
+  const [touch, setTouch] = useState(isTouch);
+  useEffect(() => {
+    const mq = window.matchMedia?.('(hover: none)');
+    if (!mq) return;
+    const on = () => setTouch(mq.matches);
+    mq.addEventListener('change', on);
+    return () => mq.removeEventListener('change', on);
+  }, []);
   const openMenu = (m: Message) => {
     sheetAt.current = Date.now();
     if (isTouch()) setSheet(m);
@@ -194,13 +212,24 @@ export function Chat({
 
   return (
     <div className="chat">
-      <div className="chat-list" ref={listRef} onScroll={onScroll}>
+      <div
+        className="chat-list"
+        ref={listRef}
+        onScroll={onScroll}
+        onTouchStart={() => markUserScroll(60_000)}
+        onTouchEnd={() => markUserScroll(1500)}
+        onTouchCancel={() => markUserScroll(1500)}
+        onWheel={() => markUserScroll(400)}
+        onPointerDown={(e) => e.pointerType === 'mouse' && markUserScroll(60_000)}
+        onPointerUp={(e) => e.pointerType === 'mouse' && markUserScroll(400)}
+        onKeyDown={() => markUserScroll(800)}
+      >
         {tip && messages.some((m) => m.user !== 'system') && (
           <div className="tip">
             <span>
               <b>Двойное нажатие</b> на сообщение ставит {DOUBLE_TAP}.{' '}
               <span className="tip-touch">
-                <b>Удержание</b> — другие реакции и ответ.
+Другие реакции и ответ — <b>кнопки под сообщением</b>.
               </span>
               <span className="tip-mouse">Остальные реакции и ответ — в кнопках справа при наведении.</span>
             </span>
@@ -289,7 +318,7 @@ export function Chat({
                   </button>
                 )}
                 {m.text && <p className="msg-text">{m.text}</p>}
-                {m.reactions.length > 0 && (
+                {(m.reactions.length > 0 || touch) && (
                   <div className="reactions">
                     {m.reactions.map((r) => (
                       <button
@@ -304,6 +333,36 @@ export function Chat({
                         {r.emoji} <span>{r.users.length}</span>
                       </button>
                     ))}
+                    {touch && (
+                      <>
+                        <button
+                          className="msg-btn"
+                          aria-label="Поставить реакцию"
+                          onPointerDown={(e) => e.stopPropagation()}
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            sheetAt.current = 0;
+                            setSheet(m);
+                          }}
+                        >
+                          <Icon name="smile" size={16} />
+                          <span className="plus">+</span>
+                        </button>
+                        <button
+                          className="msg-btn"
+                          aria-label="Ответить"
+                          onPointerDown={(e) => e.stopPropagation()}
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            setReply(m);
+                            inputRef.current?.focus();
+                          }}
+                        >
+                          <Icon name="reply" size={15} />
+                          Ответить
+                        </button>
+                      </>
+                    )}
                   </div>
                 )}
               </div>
