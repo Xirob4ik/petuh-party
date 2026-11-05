@@ -634,6 +634,126 @@ add('chick-angry', 'Злюка', 'chicks', 'злой,злюка,бесит,angry
     chick('open', 'small', extra=brows('angry', 86) + anger(156, 50)) + caption('ГРР', color=RED))
 
 
+
+# ── 18+: надписи в стиле «синие буквы с белой обводкой» ─────────
+# Строки разделяются «|», строка со звёздочкой в начале набирается мелко.
+ADULT = [
+    'Разорву|*на тебе бельё', 'Кончу|*на твою|*одежду', 'Кончу|на лицо', 'Кончу|на жопу', '*Ебля будет|долгой',
+    'Придушу|немного', 'Отлуплю', '*Размажу|*сперму|по лицу', 'Накачаю|спермой', 'Будешь|вещью',
+    'Выебу|*на столе', 'Трахну|в душе', 'Куни|*для начала', '*Поиграю|*пальцами|*с пиздой', 'Обматерю',
+    '*Засуну пальцы|в рот', '*Трусы сними|губами', 'Порву|*твои трусы', 'Трахну|*в машине', 'Ебу|*неспеша',
+    'Ебу в|*три захода', '*Кончишь|*от анала', 'Кончаем|*одновре-|*менно?', '*Я|свингер', 'Смена|*партнёров?',
+    '*Пущу тебя|*по кругу', 'Ебаться|*и кричать!', 'Люблю|орать', 'Буду|кусать', '*Я|страстный',
+    'Вылижу|*твою попку', 'Хочу|*ласкать киску', '*Пальцами|в киску', '*Мои пальцы|*— умелые', 'Люблю|жёстко',
+    'Кончу|*на грудь', 'Буду|трахать|*и любоваться', 'Не|закрывай|глаза...', 'Хуй|*большой|примешь?', 'У меня|*не|*маленький',
+    '*Будешь|*рабочей|*глоткой', '*Привяжу|*тебя|*к кровати...', 'Люблю|горячих|*штучек', 'Буду|*мучать соски', '*Люблю делать|больно',
+    '*Доминант', 'Так|*тебя ещё|не ебали', 'Лижи|хуй', '*Посасывай|член', 'Заткну|*тебе рот',
+    'Подрочу|тобой', '*Твоя дыра|*только моя', 'Мой|*член тебе|*по размеру', '*Вылизывай|*мне жопу', 'Лижи|яйца',
+    '*Буду|*плевать|на тебя...', '*Вылижешь|*мои трусы', '*Ношу бельё|*несколько|*дней', '*Буду орать|на тебя', '*Проси|*прощения|*на коленях',
+    'Выебу|*в позе|*монашки', '*Проси чтоб|*трахал|*глубже', '*Хочу кончить,|*когда ты|*плачешь', '*Кончаю|*на лицо —|*не закрывай|глаза', '*Жди голой|*в кровати',
+    'Побрею|*твою киску', 'Сядь|киской|на лицо', '*Отфистингую|рукой', 'Выебу|*фаллосом', '*Сфоткаемся|*во время|*секса?',
+    '*Хочу|*ласкать|*твои ушки', 'Засосов|*будет много', 'Можешь|*орать — меня|*это возбуждает', '*Обслуживай|послушно', 'Сжимай|*мой член|*внутри себя',
+    'Ебу|*на вылет', 'Ебу|*по подливе', 'Хочу|секс', 'Терпи —|*не захлеб-|*нёшься', '*Попрыгаешь|на мне?',
+    'Подрочу|на тебя', 'Расскажи|свои|фантазии', 'Голое|*фото жду...', 'Возбуди|меня', 'Заслужи|*мой хуй',
+    '*Обслужишь|нас|*с другом?', '*Продержишься|долго...|дам денег', 'Люблю|*продажных', 'Сегодня|*ты шлюха', '*Я очень|*плохой|*парень',
+    '*Я|жиголо', 'Исполню|*твои|*фантазии', '*Хуй|широкий', '*Хуй|толстый', '*Хуй|длинный',
+    'Стоит|долго', 'Возбуди|*прикосно-|*вениями', '*Хочу|*гладить|*твои коленки',
+]
+
+A_FILL_TOP = '#9FD8FF'
+A_FILL_BOT = '#2F7BFF'
+A_EDGE = '#0B2A6F'
+
+
+def cond_path(text: str, cx: float, baseline: float, size: float, sx: float = 0.74) -> tuple[str, float]:
+    """Как text_path, но буквы сжаты по ширине — плотная «плакатная» надпись."""
+    def adv(ch):
+        return (_hmtx[_cmap.get(ord(ch), _cmap[ord('?')])][0] * size / _upm + (size * 0.16 if ch == ' ' else 0)) * sx
+    w = sum(adv(ch) for ch in text)
+    x = cx - w / 2
+    k = size / _upm
+    pen = SVGPathPen(_glyphs)
+    for ch in text:
+        g = _cmap.get(ord(ch), _cmap[ord('?')])
+        _glyphs[g].draw(TransformPen(pen, (k * sx, 0, 0, -k, x, baseline)))
+        x += adv(ch)
+    return pen.getCommands(), w
+
+
+def _line_width(text: str, size: float) -> float:
+    return cond_path(text, 0, 0, size)[1]
+
+
+def adult_svg(lines: list[tuple[str, float]], extra: str = '') -> str:
+    # каждая строка растягивается на ширину стикера (крупные — до 62, мелкие — до 30),
+    # затем весь блок при необходимости уменьшается по высоте и центрируется
+    W, H, GAP = 186, 180, 2
+    fitted = []
+    for text, cap in lines:
+        t = text.upper()
+        if not t:
+            fitted.append((t, cap))
+            continue
+        sz = min(cap, W / _line_width(t, 100) * 100)
+        fitted.append((t, sz))
+    total = sum(sz * 0.84 for _, sz in fitted) + GAP * (len(fitted) - 1)
+    k = min(1.0, H / total)
+    fitted = [(t, sz * k) for t, sz in fitted]
+    total = sum(sz * 0.84 for _, sz in fitted) + GAP * k * (len(fitted) - 1)
+    y = 100 - total / 2
+    paths = []
+    for text, sz in fitted:
+        y += sz * 0.84
+        if text:
+            d, _ = cond_path(text, 100, y, sz)
+            paths.append(d)
+        y += GAP * k
+    d_all = ' '.join(paths)
+    min_sz = min(sz for t, sz in fitted if t)
+    edge = max(4.0, min(8.0, 0.22 * min_sz))
+    return (
+        '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">'
+        f'<defs><linearGradient id="f" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="{A_FILL_TOP}"/>'
+        f'<stop offset="1" stop-color="{A_FILL_BOT}"/></linearGradient>'
+        '<filter id="sh" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="3" stdDeviation="2.5" flood-color="#000" flood-opacity=".35"/></filter></defs>'
+        f'<g filter="url(#sh)"><path d="{d_all}" fill="{A_EDGE}" stroke="{A_EDGE}" stroke-width="{edge + 4:.1f}" stroke-linejoin="round"/>'
+        f'<path d="{d_all}" fill="#fff" stroke="#fff" stroke-width="{edge:.1f}" stroke-linejoin="round"/>'
+        f'<path d="{d_all}" fill="url(#f)"/></g>{extra}</svg>'
+    )
+
+
+def parse_adult(spec: str) -> list[tuple[str, float]]:
+    out = []
+    for part in spec.split('|'):
+        small = part.startswith('*')
+        out.append((part.lstrip('*'), 36 if small else 66))
+    return out
+
+
+ADULT_STICKERS: list[S] = []
+for i, spec in enumerate(ADULT, 1):
+    name = ' '.join(x.lstrip('*') for x in spec.split('|'))
+    tags = '18+,' + name.lower().replace('...', '').replace('—', '').replace('?', '').replace('!', '').replace(',', '')
+    ADULT_STICKERS.append(S(f'x-{i:03d}', name, 'adult', tags, adult_svg(parse_adult(spec))))
+
+# «I love anal» — сердце рисуем фигурой, в шрифте его нет
+_i, _ = cond_path('I', 62, 96, 92)
+_anal, _w = cond_path('ANAL', 100, 172, 70)
+_heart_d = 'M0 9 C-14 -1 -13 -13 -5.5 -13 C-2 -13 0 -10 0 -8 C0 -10 2 -13 5.5 -13 C13 -13 14 -1 0 9Z'
+_love = (
+    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">'
+    f'<defs><linearGradient id="f" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="{A_FILL_TOP}"/>'
+    f'<stop offset="1" stop-color="{A_FILL_BOT}"/></linearGradient>'
+    '<filter id="sh" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="3" stdDeviation="2.5" flood-color="#000" flood-opacity=".35"/></filter></defs>'
+    f'<g filter="url(#sh)"><path d="{_i} {_anal}" fill="{A_EDGE}" stroke="{A_EDGE}" stroke-width="12" stroke-linejoin="round"/>'
+    f'<path d="{_i} {_anal}" fill="#fff" stroke="#fff" stroke-width="8" stroke-linejoin="round"/>'
+    f'<path d="{_i} {_anal}" fill="url(#f)"/>'
+    f'<g transform="translate(124 66) scale(3.6)"><path d="{_heart_d}" fill="#fff" stroke="#fff" stroke-width="2.4" stroke-linejoin="round"/>'
+    f'<path d="{_heart_d}" fill="#FF3D7F"/></g></g></svg>'
+)
+ADULT_STICKERS.append(S('x-love-anal', 'I love anal', 'adult', '18+,i love anal,люблю анал,анал', _love))
+STICKERS.extend(ADULT_STICKERS)
+
 # ── запись файлов ──────────────────────────────────────────────
 CATEGORIES = [
     ('all', 'Все'),
@@ -642,6 +762,7 @@ CATEGORIES = [
     ('phrases', 'Фразы'),
     ('chicks', 'Цыпа'),
     ('classic', 'Классика'),
+    ('adult', '18+'),
 ]
 
 # Стикеры из прошлой версии проекта — оставляем разделом «Классика»
@@ -710,7 +831,7 @@ export function searchStickers(query: string, category: 'all' | StickerCategory)
   const q = query.trim().toLowerCase();
   return STICKERS.filter(
     (x) =>
-      (category === 'all' || x.category === category) &&
+      (category === 'all' ? x.category !== 'adult' : x.category === category) &&
       (!q || x.name.toLowerCase().includes(q) || x.tags.some((t) => t.includes(q))),
   );
 }}
