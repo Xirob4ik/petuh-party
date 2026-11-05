@@ -14,18 +14,22 @@
 
 /* ─── Токены ─────────────────────────────────────────────────── */
 :root {
-  --bg: #131017;
-  --surface: #1b1720;
-  --surface-2: #241f2a;
-  --line: #322c39;
-  --text: #f4efe8;
-  --muted: #a69dae;
-  --faint: #716879;
-  --yolk: #f6c445;
-  --yolk-hover: #ffd35e;
-  --yolk-ink: #1e1706;
-  --comb: #ff6150;
-  --ok: #7fd48c;
+  /* ночь, ультрафиолет и неоновый гребешок */
+  --bg: #0d0a14;
+  --surface: #151020;
+  --surface-2: #1e172d;
+  --line: #2c2340;
+  --text: #f3effb;
+  --muted: #a99ec4;
+  --faint: #6e6489;
+  --yolk: #a07bff;
+  --yolk-hover: #b496ff;
+  --yolk-ink: #ffffff;
+  --grad: linear-gradient(135deg, #8b5cff 0%, #c04dff 100%);
+  --grad-hover: linear-gradient(135deg, #9a70ff 0%, #cc63ff 100%);
+  --glow: 0 10px 30px -10px rgba(150, 90, 255, 0.75);
+  --comb: #ff4f9a;
+  --ok: #7fd8a6;
 
   --sans: 'Onest', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   --display: 'Unbounded', 'Onest', system-ui, sans-serif;
@@ -85,7 +89,7 @@ button:disabled {
 }
 
 ::selection {
-  background: rgba(246, 196, 69, 0.35);
+  background: rgba(160, 123, 255, 0.4);
 }
 
 .sr-only {
@@ -120,15 +124,20 @@ button:disabled {
   transition: background-color 0.15s, color 0.15s, opacity 0.15s;
 }
 .btn.primary {
-  background: var(--yolk);
+  background: var(--grad);
   color: var(--yolk-ink);
+  box-shadow: var(--glow), inset 0 1px 0 rgba(255, 255, 255, 0.18);
 }
 .btn.primary:hover:not(:disabled) {
-  background: var(--yolk-hover);
+  background: var(--grad-hover);
+}
+.btn.primary:active:not(:disabled) {
+  transform: translateY(1px);
 }
 .btn.primary:disabled {
   background: var(--surface-2);
   color: var(--faint);
+  box-shadow: none;
 }
 .btn.ghost {
   background: var(--surface-2);
@@ -183,6 +192,7 @@ button:disabled {
 }
 .field:focus {
   border-color: var(--yolk);
+  box-shadow: 0 0 0 4px rgba(160, 123, 255, 0.16);
 }
 .field.big {
   height: 56px;
@@ -213,7 +223,7 @@ button:disabled {
   place-items: center;
   border-radius: 50%;
   object-fit: cover;
-  color: #1a1410;
+  color: #160d26;
   font-weight: 700;
   letter-spacing: 0.02em;
   user-select: none;
@@ -258,10 +268,69 @@ button:disabled {
 /* ─── Главная ────────────────────────────────────────────────── */
 .home,
 .gate {
+  position: relative;
+  isolation: isolate;
+  overflow-x: hidden;
   min-height: 100dvh;
   display: flex;
   flex-direction: column;
   padding: 0 clamp(16px, 5vw, 64px);
+}
+/* фиолетовое свечение за главной и входом */
+.home::before,
+.gate::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(60% 50% at 85% 20%, rgba(150, 90, 255, 0.22), transparent 70%),
+    radial-gradient(40% 40% at 10% 0%, rgba(224, 77, 214, 0.1), transparent 70%);
+}
+/* большой петух — главный герой главной страницы */
+.hero-art {
+  position: absolute;
+  z-index: -1;
+  right: clamp(-80px, -2vw, 0px);
+  top: 90px;
+  width: min(44vw, 560px);
+  aspect-ratio: 1;
+  transform: rotate(-6deg);
+  pointer-events: none;
+  animation: hero-in 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+.hero-art svg {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 30px 60px rgba(150, 70, 255, 0.45));
+}
+@keyframes hero-in {
+  from {
+    opacity: 0;
+    transform: rotate(-14deg) translateY(30px) scale(0.92);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-art {
+    animation: none;
+  }
+}
+@media (max-width: 899px) {
+  .hero-art {
+    position: relative;
+    right: auto;
+    top: auto;
+    width: 120px;
+    margin: 18px 0 -8px -10px;
+    transform: rotate(-6deg);
+  }
+  .hero-art + .home-main {
+    padding-top: 20px;
+  }
+  .hero-art svg {
+    filter: drop-shadow(0 14px 28px rgba(150, 70, 255, 0.5));
+  }
 }
 .home-top {
   height: 76px;
@@ -926,13 +995,15 @@ video.player-frame {
   display: grid;
   place-items: center;
   border-radius: var(--r-sm);
-  background: var(--yolk);
+  background: var(--grad);
   color: var(--yolk-ink);
+  box-shadow: 0 6px 18px -6px rgba(150, 90, 255, 0.8);
   transition: opacity 0.15s;
 }
 .send:disabled {
   background: var(--surface-2);
   color: var(--faint);
+  box-shadow: none;
 }
 
 /* зрители */
@@ -1345,7 +1416,7 @@ kbd {
   max-width: 120px;
   padding: 1px 8px;
   border-radius: 999px;
-  background: rgba(19, 16, 23, 0.78);
+  background: rgba(13, 10, 20, 0.78);
   color: var(--text);
   font-size: 11px;
   font-weight: 600;
@@ -1406,7 +1477,7 @@ kbd {
   gap: 2px;
   padding: 4px;
   border-radius: 999px;
-  background: rgba(19, 16, 23, 0.72);
+  background: rgba(13, 10, 20, 0.72);
   backdrop-filter: blur(8px);
   opacity: 0.35;
   transition: opacity 0.2s;

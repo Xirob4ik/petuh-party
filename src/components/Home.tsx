@@ -3,7 +3,7 @@ import { looksLikeLink, parseSource } from '../../shared/sources';
 import { loadRecent, type UserProfile } from '../lib/user';
 import { copyText, makeRoomCode, roomUrl, timeAgo } from '../lib/util';
 import { InstallButton } from './Extras';
-import { Avatar, Icon, Logo, toast } from './ui';
+import { Avatar, Icon, Logo, Mark, toast } from './ui';
 
 /** Открытые фильмы для пробы: можно сразу проверить синхронизацию с другом. */
 const DEMOS = [
@@ -55,6 +55,9 @@ export function Home({ user, onGo, onOpenProfile }: Props) {
         </div>
       </header>
 
+      <div className="hero-art" aria-hidden="true">
+        <Mark bare size={520} />
+      </div>
       <main className="home-main">
         <h1 className="hero">
           Смотрите кино вместе, где&nbsp;бы вы ни&nbsp;были

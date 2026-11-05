@@ -132,17 +132,35 @@ export function Icon({ name, size = 18 }: { name: IconName; size?: number }) {
 }
 
 /** Знак: голова петуха, она же кнопка «плей». */
-export function Mark({ size = 28 }: { size?: number }) {
+export function Mark({ size = 30, bare = false }: { size?: number; bare?: boolean }) {
+  const id = React.useId().replace(/:/g, '');
   return (
-    <svg width={size} height={size} viewBox="0 0 32 32" aria-hidden="true" className="mark">
-      <circle cx="9.6" cy="6.4" r="2.7" fill="var(--comb)" />
-      <circle cx="13.9" cy="7.6" r="2.9" fill="var(--comb)" />
-      <circle cx="18.1" cy="10" r="2.4" fill="var(--comb)" />
-      <path
-        d="M9.5 9.6v15.8a1.6 1.6 0 0 0 2.4 1.4l13.2-7.9a1.6 1.6 0 0 0 0-2.8L11.9 8.2a1.6 1.6 0 0 0-2.4 1.4z"
-        fill="var(--yolk)"
-      />
-      <circle cx="14.2" cy="15.4" r="1.45" fill="var(--bg)" />
+    <svg width={size} height={size} viewBox="0 0 64 64" aria-hidden="true" className={bare ? 'mark bare' : 'mark'}>
+      <defs>
+        <linearGradient id={`${id}b`} x1="0.2" y1="0" x2="0.8" y2="1">
+          <stop offset="0" stopColor="#a77bff" />
+          <stop offset="1" stopColor="#e04dd6" />
+        </linearGradient>
+        <linearGradient id={`${id}c`} x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stopColor="#ff6fb0" />
+          <stop offset="1" stopColor="#ff3d7f" />
+        </linearGradient>
+      </defs>
+      {!bare && <rect width="64" height="64" rx="18" fill="#1a1229" />}
+      <g transform="translate(1 2)">
+        <path
+          d="M22 19C20 14 23 10 27 11.5c.5-4.5 6-5.5 8-1.5 2-3.5 7.5-2 6.5 2.5 3.5 0 4.5 4.5.5 7Z"
+          fill={`url(#${id}c)`}
+        />
+        <path
+          d="M43 24c-1.5-7-10-9.5-16-6.5s-7.5 9.5-6.5 14.5l-8 4 7 2.5-8.5 6 9.5 1-6.5 7.5 12.5-3c6-1.5 11-5 13-10.5 1.5-4 3.5-8 4.5-11Z"
+          fill={`url(#${id}b)`}
+        />
+        <path d="M42.5 23.2l10 4.4-9.1 3.4Z" fill="#ffe08a" stroke="#ffe08a" strokeWidth="1.6" strokeLinejoin="round" />
+        <path d="M42.8 32c3.2 1 3.4 6.5.2 7.6-2.4.7-3-3.6-.2-7.6Z" fill={`url(#${id}c)`} />
+        <circle cx="35" cy="23" r="2.6" fill="#1a1229" />
+        <circle cx="35.9" cy="22.1" r="0.9" fill="#fff" />
+      </g>
     </svg>
   );
 }

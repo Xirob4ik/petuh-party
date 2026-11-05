@@ -9,7 +9,7 @@ export interface UserProfile {
 
 const KEY = 'pp.profile.v2';
 
-export const AVATAR_COLORS = ['#f6c445', '#ff7a59', '#7bd389', '#6cc4ff', '#c79bff', '#ff8fc7', '#e8e2d6'];
+export const AVATAR_COLORS = ['#b794ff', '#ff86c2', '#7fd8b6', '#78c6ff', '#ffc078', '#e3a6ff', '#dcd5ec'];
 
 const ADJ = ['Сонный', 'Бодрый', 'Тихий', 'Хитрый', 'Ранний', 'Смелый', 'Важный', 'Добрый'];
 const NOUN = ['петух', 'цыплёнок', 'кочет', 'гусь', 'индюк', 'селезень', 'фазан'];
