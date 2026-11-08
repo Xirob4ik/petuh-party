@@ -1,7 +1,7 @@
 // Файл создан скриптом tools/stickers.py — правьте скрипт, а не этот файл.
 // Все стикеры нарисованы для Petuh Party и лежат в /public/stickers.
 
-export type StickerCategory = 'petya' | 'cinema' | 'phrases' | 'chicks' | 'classic' | 'adult';
+export type StickerCategory = 'petya' | 'cinema' | 'phrases' | 'chicks' | 'memes' | 'classic' | 'adult';
 
 export interface Sticker {
   id: string;
@@ -11,7 +11,7 @@ export interface Sticker {
   tags: string[];
 }
 
-export const STICKER_CATEGORIES: { id: 'all' | StickerCategory; name: string }[] = [{"id": "all", "name": "Все"}, {"id": "petya", "name": "Петя"}, {"id": "cinema", "name": "Кино"}, {"id": "phrases", "name": "Фразы"}, {"id": "chicks", "name": "Цыпа"}, {"id": "classic", "name": "Классика"}, {"id": "adult", "name": "18+"}];
+export const STICKER_CATEGORIES: { id: 'all' | StickerCategory; name: string }[] = [{"id": "all", "name": "Все"}, {"id": "petya", "name": "Петя"}, {"id": "cinema", "name": "Кино"}, {"id": "phrases", "name": "Фразы"}, {"id": "chicks", "name": "Цыпа"}, {"id": "memes", "name": "Мемы"}, {"id": "classic", "name": "Классика"}, {"id": "adult", "name": "18+"}];
 
 export const STICKERS: Sticker[] = [
   {
@@ -2960,6 +2960,47 @@ export const STICKERS: Sticker[] = [
       "топ контент",
       "огонь",
       "кино"
+    ]
+  },
+  {
+    "id": "photo-stare",
+    "name": "Взгляд",
+    "file": "photo-stare.webp",
+    "category": "memes",
+    "tags": [
+      "взгляд",
+      "смотрю",
+      "пристально",
+      "😐",
+      "мем"
+    ]
+  },
+  {
+    "id": "photo-lips",
+    "name": "Губки",
+    "file": "photo-lips.webp",
+    "category": "memes",
+    "tags": [
+      "губы",
+      "губки",
+      "люблю",
+      "красотка",
+      "😍",
+      "мем"
+    ]
+  },
+  {
+    "id": "photo-cry",
+    "name": "Плачу",
+    "file": "photo-cry.webp",
+    "category": "memes",
+    "tags": [
+      "плачу",
+      "рыдаю",
+      "слёзы",
+      "грустно",
+      "😭",
+      "мем"
     ]
   }
 ];

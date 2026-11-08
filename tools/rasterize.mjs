@@ -35,4 +35,12 @@ for (const f of files) {
   bytes += buf.length;
 }
 await browser.close();
+
+// фото-стикеры: уже готовые картинки, только переводим в WebP
+const photos = path.join(root, 'tools', 'sticker-photos');
+for (const f of fs.existsSync(photos) ? fs.readdirSync(photos).filter((x) => x.endsWith('.png')) : []) {
+  const buf = await sharp(path.join(photos, f)).webp({ quality: 88, alphaQuality: 100, effort: 4 }).toBuffer();
+  fs.writeFileSync(path.join(out, f.replace(/\.png$/, '.webp')), buf);
+  bytes += buf.length;
+}
 console.log(`${files.length} стикеров → public/stickers, ${(bytes / 1024 / 1024).toFixed(1)} МБ`);

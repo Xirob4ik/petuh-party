@@ -795,8 +795,16 @@ CATEGORIES = [
     ('cinema', 'Кино'),
     ('phrases', 'Фразы'),
     ('chicks', 'Цыпа'),
+    ('memes', 'Мемы'),
     ('classic', 'Классика'),
     ('adult', '18+'),
+]
+
+# Фото-стикеры: картинки лежат в tools/sticker-photos/*.png, в WebP их переводит tools/rasterize.mjs
+PHOTOS = [
+    ('photo-stare', 'Взгляд', 'взгляд,смотрю,пристально,😐,мем'),
+    ('photo-lips', 'Губки', 'губы,губки,люблю,красотка,😍,мем'),
+    ('photo-cry', 'Плачу', 'плачу,рыдаю,слёзы,грустно,😭,мем'),
 ]
 
 # Стикеры из прошлой версии проекта — оставляем разделом «Классика»
@@ -837,6 +845,9 @@ def main():
     ] + [
         {'id': i, 'name': n, 'file': f'{i}.webp', 'category': 'classic', 'tags': t.split(',')}
         for i, n, t in CLASSIC
+    ] + [
+        {'id': i, 'name': n, 'file': f'{i}.webp', 'category': 'memes', 'tags': t.split(',')}
+        for i, n, t in PHOTOS
     ]
     cats = [c for c, _ in CATEGORIES if c != 'all']
     ts = f"""// Файл создан скриптом tools/stickers.py — правьте скрипт, а не этот файл.
