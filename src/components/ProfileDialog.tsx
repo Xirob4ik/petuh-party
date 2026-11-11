@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { LIMITS } from '../../shared/types';
+import { isDjOn, setDjOn } from '../lib/dj';
 import { isSoundOn, playChime, setSoundOn } from '../lib/sound';
 import { AVATAR_COLORS, type UserProfile } from '../lib/user';
 import { compressImage } from '../lib/util';
@@ -19,6 +20,7 @@ export function ProfileDialog({
   const [avatar, setAvatar] = useState(user.avatar);
   const [color, setColor] = useState(user.color);
   const [sound, setSound] = useState(isSoundOn());
+  const [djOn, setDj] = useState(isDjOn());
   const fileRef = useRef<HTMLInputElement>(null);
 
   const pick = async (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -39,6 +41,7 @@ export function ProfileDialog({
     const n = name.trim().slice(0, LIMITS.name);
     if (!n) return;
     setSoundOn(sound);
+    setDjOn(djOn);
     onSave({ ...user, name: n, avatar, color });
     onClose();
   };
@@ -103,6 +106,17 @@ export function ProfileDialog({
             }}
           />
           <span>Звуки сообщений и реакций</span>
+        </label>
+
+        <label className="toggle">
+          <input
+            type="checkbox"
+            checked={djOn}
+            onChange={(e) => {
+              setDj(e.target.checked);
+            }}
+          />
+          <span>DJ Петух — ведущий комнаты</span>
         </label>
 
         <div className="profile-install">

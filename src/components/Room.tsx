@@ -1,4 +1,6 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { useDjHost } from '../lib/dj';
+import { DjPetuh } from './DjPetuh';
 import { SOURCE_LABEL } from '../../shared/sources';
 import type { Message, Person, Position, ServerMsg, Source, VideoState } from '../../shared/types';
 import type { Nav } from '../App';
@@ -264,6 +266,18 @@ export function Room({ roomId, nav, user, onUserChange, onHome, onOpenProfile }:
   };
 
   // ── экран входа ───────────────────────────────────
+  const dj = useDjHost({
+    loaded,
+    meId: user.id,
+    video,
+    people,
+    positions,
+    messages,
+    floats: floatItems,
+    info,
+    serverNow: () => client?.serverNow() ?? Date.now(),
+  });
+
   if (!joined) {
     return (
       <JoinGate
@@ -413,6 +427,7 @@ export function Room({ roomId, nav, user, onUserChange, onHome, onOpenProfile }:
               floatsDisabled={!source}
               onFloat={sendFloat}
               onEditFloats={() => setFloatsOpen(true)}
+              host={<DjPetuh line={dj.line} onDismiss={dj.dismiss} />}
             />
           ) : (
             <div className="people-wrap">

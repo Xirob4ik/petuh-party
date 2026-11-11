@@ -25,6 +25,8 @@ interface Props {
   floatsDisabled: boolean;
   onFloat: (emoji: string) => void;
   onEditFloats: () => void;
+  /** DJ Петух — всплывает над строкой ввода */
+  host?: React.ReactNode;
 }
 
 async function imageFromFile(file: File) {
@@ -46,6 +48,7 @@ export function Chat({
   floatsDisabled,
   onFloat,
   onEditFloats,
+  host,
 }: Props) {
   const [stickersOpen, setStickersOpen] = useState(false);
   const [text, setText] = useState('');
@@ -405,6 +408,7 @@ export function Chat({
       </div>
 
       <div className="composer">
+        {host}
         <ReactionBar emojis={floats} onSend={onFloat} onEdit={onEditFloats} disabled={floatsDisabled} />
         <div className="typing" aria-live="polite">
           {typingNames.length > 0 && `${typingNames.join(', ')} ${typingNames.length > 1 ? 'пишут' : 'пишет'}…`}
