@@ -6,6 +6,7 @@ import type { Message, Person, Position, VideoState } from '../../shared/types';
 import type { SyncInfo } from '../player/sync';
 import { storage } from './storage';
 import { formatTime } from './util';
+import { ADULT_LINES } from './djAdult';
 
 export type DjMood = 'hi' | 'hype' | 'party' | 'cry' | 'laugh' | 'shock' | 'sleep' | 'think' | 'love' | 'wink' | 'cool';
 
@@ -43,9 +44,9 @@ interface Inputs {
 }
 
 const MIN = 60_000;
-const GAP_AFTER_LINE = 2500; // пауза между репликами
+const GAP_AFTER_LINE = 1500; // пауза между репликами
 const CHATTER_GAP = 50_000; // болтовня — не чаще раза в 50 с
-const STALE = 20_000; // реплика, которая ждала дольше, уже не к месту
+const STALE = 35_000; // реплика, которая ждала дольше, уже не к месту
 
 const CRY = ['😭', '😢', '🥲', '😿'];
 const LAUGH = ['😂', '🤣', '💀', '😹', '😆'];
@@ -53,7 +54,10 @@ const LOVE = ['😍', '❤️', '🥰', '💜', '😘', '❤'];
 const SHOCK = ['😱', '😳', '🤯', '😨', '🫢'];
 
 const pick = <T,>(list: T[]) => list[Math.floor(Math.random() * list.length)];
-const fill = (t: string, vars: Record<string, string | number>) => t.replace(/\{(\w+)\}/g, (_, k) => String(vars[k] ?? ''));
+const fill = (t: string, vars: Record<string, string | number>) => {
+  const out = t.replace(/\{(\w+)\}/g, (_, k) => String(vars[k] ?? ''));
+  return out.charAt(0).toUpperCase() + out.slice(1);
+};
 const isAdultSticker = (id?: string) => !!id && /^[xy]-/.test(id);
 
 function roomPos(v: VideoState, at: number) {
@@ -201,7 +205,9 @@ export function useDjHost(inp: Inputs) {
 
   const show = (p: Pending) => {
     const s = st.current;
-    const dur = Math.min(9000, 4200 + p.text.length * 45);
+    const full = Math.min(9000, 4200 + p.text.length * 45);
+    // если ждут ещё реплики — говорим быстрее, чтобы успеть ответить на всё
+    const dur = s.queue.length ? Math.max(3200, full * 0.6) : full;
     s.showing = { ...p, until: Date.now() + dur };
     s.lastSpoke = Date.now();
     setLine({ id: ++s.seq, text: p.text, mood: p.mood });
@@ -240,6 +246,11 @@ export function useDjHost(inp: Inputs) {
       return;
     }
     s.queue.push(p);
+    if (s.showing && s.showing.until - now > 3500) {
+      s.showing.until = now + 3500;
+      clearTimeout(s.timer);
+      s.timer = setTimeout(hide, 3500);
+    }
     if (s.queue.length > 4) s.queue = s.queue.sort((a, b) => b.prio - a.prio || b.at - a.at).slice(0, 4);
     pump();
   };
@@ -425,7 +436,13 @@ export function useDjHost(inp: Inputs) {
         s.stickerTimes = [...s.stickerTimes.filter((t) => now - t < MIN), now];
         if (m.sticker === 'photo-cry') hit('😭');
         if (s.stickerTimes.length >= 5) say('stickers', L.stickerWar, 'party', 0, 5 * MIN);
-        else if (isAdultSticker(m.sticker) && Math.random() < 0.3) say('adult', L.adult, 'wink', 0, 4 * MIN);
+        else if (isAdultSticker(m.sticker)) {
+          // на каждый стикер 18+ — своя реплика; общая короткая пауза, чтобы не заваливать
+          const own = ADULT_LINES[m.sticker];
+          const n = m.user === inpRef.current.meId ? 'ты' : m.name;
+          if (own) say(`adult:${m.sticker}`, [own[1]], own[0], 1, 0, { n });
+          else say('adult', L.adult, 'wink', 1, 0);
+        }
       }
       if (m.image && Math.random() < 0.25) say('image', L.image, 'wink', 0, 6 * MIN);
       if (s.msgTimes.length >= 10) say('chatBurst', L.chatBurst, 'shock', 0, 6 * MIN);

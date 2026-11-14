@@ -734,7 +734,7 @@ def parse_adult(spec: str) -> list[tuple[str, float]]:
 
 ADULT_STICKERS: list[S] = []
 for i, spec in enumerate(ADULT, 1):
-    name = ' '.join(x.lstrip('*') for x in spec.split('|'))
+    name = ' '.join(x.lstrip('*') for x in spec.split('|')).replace('- ', '')
     tags = '18+,' + name.lower().replace('...', '').replace('—', '').replace('?', '').replace('!', '').replace(',', '')
     ADULT_STICKERS.append(S(f'x-{i:03d}', name, 'adult', tags, adult_svg(parse_adult(spec))))
 
@@ -765,7 +765,7 @@ ADULT_RED = [
     'Свяжи|меня', 'Хочу|*в два|члена', 'Фото|*во время|секса', 'Не|даю',
 ]
 for i, spec in enumerate(ADULT_RED, 1):
-    name = ' '.join(x.lstrip('*') for x in spec.split('|'))
+    name = ' '.join(x.lstrip('*') for x in spec.split('|')).replace('- ', '')
     tags = '18+,' + name.lower().replace('...', '').replace('—', '').replace('?', '').replace('!', '').replace(',', '')
     ADULT_STICKERS.append(S(f'y-{i:03d}', name, 'adult', tags,
                             adult_svg(parse_adult(spec), top='#FF8A6B', bot='#D61F3A', edge_c='#4A0816')))
